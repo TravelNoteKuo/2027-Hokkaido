@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFCF6">
+<meta name="description" content="2027 北海道 7 天 6 夜・日系手繪風互動旅行手帳。">
+<title>北海道冬日散策｜2027 互動旅行手帳</title>
+<style>
+:root{--paper:#FFFCF6;--ink:#3E3A39;--coral:#F2A497;--yellow:#F6D27A;--blue:#A8D3E6;--leaf:#B9DAA5;--muted:#766f67;--light:#fff;--stroke:3px solid var(--ink);--offset:5px 5px 0 var(--ink)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:83px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 'Huninn','PingFang TC','Noto Sans TC',system-ui,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #287cad;outline-offset:4px}svg{max-width:100%}
+.site-top{position:sticky;top:0;z-index:70;border-bottom:var(--stroke);background:var(--paper)}.topinner{max-width:1160px;margin:auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}.logo{display:flex;align-items:center;gap:10px;white-space:nowrap;font-weight:900;letter-spacing:.02em;font-size:16px}.logo-mark{width:38px;height:38px;background:var(--blue);display:grid;place-items:center;border:var(--stroke);border-radius:50%}.logo-mark svg{width:22px;height:22px}.desktopnav{display:flex;align-items:center;gap:5px}.desktopnav a{padding:7px 12px;border-radius:100px;font-size:13px;font-weight:900}.desktopnav a:hover{background:var(--yellow)}.mini-stamp{border:2px solid var(--ink);border-radius:100px;font-size:12px;font-weight:900;padding:5px 9px;background:var(--leaf)}
+.wrapper{max-width:1160px;margin:auto;padding:22px 20px 95px}.hero{border:var(--stroke);border-radius:31px;background:var(--yellow);display:grid;grid-template-columns:1.06fr .94fr;gap:10px;min-height:350px;overflow:hidden;box-shadow:var(--offset);position:relative}.hero-text{padding:35px 15px 30px 38px;align-self:center;position:relative;z-index:2}.eyebrow{font-size:11px;letter-spacing:.19em;font-weight:900}.hero h1{margin:9px 0 7px;font-size:clamp(36px,5.3vw,66px);line-height:1.11;letter-spacing:.015em}.hero h1 .little{display:block;font-size:.43em;letter-spacing:.12em;margin-bottom:9px}.hero-lede{font-size:16px;margin:12px 0 18px;max-width:390px}.hero-pills{display:flex;flex-wrap:wrap;gap:8px}.hero-pill{display:inline-block;border:2px solid var(--ink);border-radius:100px;background:var(--paper);padding:5px 11px;font-weight:900;font-size:12px}.hero-art{display:grid;align-content:end;align-items:end;padding:8px 12px 0 0}.hero-art svg{width:100%;height:auto;display:block;filter:none}.cloud-moving{animation:floaty 5.5s ease-in-out infinite alternate}.penguin-moving{animation:wiggle 3.3s ease-in-out infinite alternate;transform-origin:55% 86%}@keyframes floaty{to{transform:translate(7px,-5px)}}@keyframes wiggle{to{transform:rotate(3deg)}}
+.quicknav{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:23px 0 36px}.quick{display:flex;align-items:center;gap:11px;border:var(--stroke);border-radius:19px;background:#fff;padding:13px 15px;box-shadow:3px 3px 0 var(--ink);font-weight:900;font-size:13px;min-height:64px}.quick:hover{transform:translateY(-2px);background:#fff6e6}.quick-graphic{width:36px;height:36px;border-radius:12px;border:2px solid var(--ink);display:grid;place-items:center;flex-shrink:0}.quick-graphic svg{width:23px;height:23px}
+.section{margin-top:48px;scroll-margin-top:80px}.section-top{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px}.section-sub{font-size:11px;letter-spacing:.18em;font-weight:900;color:#8b746b}.section h2{font-size:clamp(25px,3vw,34px);line-height:1.27;margin:2px 0 0;font-weight:900}.section-lead{font-size:12px;color:var(--muted);max-width:330px;text-align:right}
+.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.overview-card{border:var(--stroke);border-radius:22px;padding:17px 17px 15px;background:white;min-height:136px}.overview-card:nth-child(1){background:#fff3e8}.overview-card:nth-child(2){background:#e6f3f9}.overview-card:nth-child(3){background:#edf6df}.overview-card:nth-child(4){background:#f8e6e2}.overview-card .o-icon{width:33px;height:33px;border:2px solid var(--ink);border-radius:10px;background:white;display:grid;place-items:center}.overview-card .o-icon svg{width:22px;height:22px}.overview-card span{display:block;font-size:12px;font-weight:900;margin-top:8px;letter-spacing:.06em}.overview-card strong{display:block;font-size:15px;line-height:1.45;margin-top:3px}
+.date-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:4px 4px 13px}.date-row::-webkit-scrollbar{display:none}.date-btn{flex:1 0 110px;border:var(--stroke);border-radius:17px;background:white;min-height:93px;padding:10px 7px;box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease,background .15s ease;text-align:center}.date-btn small{display:block;font-size:11px;font-weight:900;letter-spacing:.08em}.date-btn b{display:block;font-size:23px;line-height:1.3;margin:3px 0}.date-btn .date-city{font-size:11px;font-weight:900;color:#55504d}.date-btn.active{background:var(--coral);transform:translateY(-3px)}.date-btn:hover{background:var(--yellow)}.day-panel{border:var(--stroke);border-radius:25px;background:white;padding:24px 27px 29px;margin-top:6px;box-shadow:var(--offset)}.day-titleline{display:flex;justify-content:space-between;align-items:start;gap:12px}.day-kicker{font-size:11px;letter-spacing:.14em;font-weight:900}.day-titleline h3{font-size:clamp(24px,3.3vw,35px);margin:3px 0 3px;line-height:1.3}.day-titleline p{margin:0;font-size:14px;color:#706a64}.day-mark{background:var(--blue);border:2px solid var(--ink);width:71px;height:71px;border-radius:17px;display:grid;align-content:center;justify-items:center;flex:0 0 auto;transform:rotate(5deg)}.day-mark b{font-size:21px;line-height:1.2}.day-mark small{font-size:11px;font-weight:900}.day-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;margin-bottom:18px}.day-fact{background:var(--paper);border:2px dashed var(--ink);border-radius:14px;padding:11px 12px;font-size:12px;line-height:1.55}.day-fact b{display:block;font-size:12px;margin-bottom:4px}.filter-row{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 18px}.filter{border:2px solid var(--ink);border-radius:100px;background:white;padding:5px 13px;font-size:12px;font-weight:900}.filter.active{background:var(--leaf)}.timeline{position:relative;margin:0 0 10px;padding:0 0 0 30px}.timeline:before{content:'';position:absolute;top:18px;bottom:14px;left:11px;border-left:3px dotted var(--ink)}.entry{position:relative;margin:0 0 14px}.entry:before{content:'';position:absolute;left:-29px;top:21px;width:16px;height:16px;background:var(--yellow);border:3px solid var(--ink);border-radius:50%}.entry-card{border:var(--stroke);border-radius:20px;padding:15px 16px;background:#fff}.entry.top-priority .entry-card{background:#fff9e7}.entry-tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.entry-time{font-weight:900;font-size:14px;background:var(--blue);border-radius:9px;padding:3px 10px;border:2px solid var(--ink)}.entry-status{font-size:11px;font-weight:900;border-radius:100px;padding:3px 9px;border:2px solid var(--ink);background:var(--paper)}.entry-status.booked{background:var(--leaf)}.entry-status.fixed{background:var(--coral)}.entry-status.option{background:var(--yellow)}.entry-status.plan{background:#eee}.entry-transport{font-size:11px;font-weight:900;border-radius:100px;padding:4px 8px;background:#e4f4ff;border:2px dashed var(--ink)}.entry h4{font-size:19px;line-height:1.38;margin:9px 0 5px}.entry p{color:#6b645f;font-size:13px;margin:0}.entry-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.link-chip{display:inline-flex;align-items:center;gap:5px;border:2px solid var(--ink);border-radius:10px;background:#fff;padding:6px 10px;font-weight:900;font-size:12px}.link-chip:hover{background:var(--yellow)}.link-chip svg{width:16px;height:16px}.link-chip.secondary{background:#ecf7f5}
+.day-notes{margin-top:17px;border:3px dashed var(--ink);border-radius:18px;background:#f0f7ea;padding:15px 19px}.day-notes b{font-size:15px}.day-notes ul{padding-left:20px;margin:6px 0 0;color:#595551;font-size:13px}.day-notes li+li{margin-top:6px}.day-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:19px}.day-bottom button{border:2px solid var(--ink);border-radius:13px;background:var(--paper);padding:8px 15px;font-weight:900}.day-bottom button:hover:not(:disabled){background:var(--yellow)}.day-bottom button:disabled{opacity:.32;cursor:not-allowed}.day-bottom span{font-size:12px;font-weight:900}
+.flight-grid,.hotel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.flight-card{border:var(--stroke);border-radius:23px;background:#eaf6fa;padding:19px 21px;position:relative;overflow:hidden}.flight-card:nth-child(2){background:#fff0e5}.flight-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.flight-code{font-weight:900;font-size:22px}.flight-flag{font-size:11px;border:2px solid var(--ink);background:#fff;padding:3px 9px;border-radius:100px;font-weight:900}.route-line{display:flex;align-items:center;gap:10px;margin:17px 0 14px}.route-place{flex:1;min-width:0}.route-place strong{font-size:33px;line-height:1.1}.route-place p{font-size:13px;font-weight:900;margin:4px 0}.route-place small{font-size:11px;color:#655d59}.route-arrow{display:grid;place-items:center;flex:0 0 63px}.route-arrow svg{width:60px;height:32px}.flight-note{border-top:2px dashed #8c8580;padding-top:12px;margin:8px 0 0;font-size:12px}.hotel-grid{grid-template-columns:repeat(3,1fr);margin-top:15px}.hotel-card{border:var(--stroke);border-radius:21px;background:#fff;padding:15px 16px}.hotel-card h3{font-size:17px;margin:8px 0 4px;line-height:1.4}.hotel-card p{font-size:12px;margin:5px 0;color:#726a66}.hotel-tag{display:inline-block;border:2px solid var(--ink);background:var(--yellow);border-radius:100px;font-size:11px;padding:3px 8px;font-weight:900}.hotel-tag.verified{background:var(--leaf)}
+.check-layout{display:grid;grid-template-columns:1fr 1fr;gap:15px}.check-card,.shop-card{border:var(--stroke);border-radius:22px;background:#fff;padding:18px}.check-card:nth-child(4n+1){background:#fff7e7}.check-card:nth-child(4n+2){background:#eaf4f8}.check-card:nth-child(4n+3){background:#eff6e9}.check-card:nth-child(4n){background:#fbedec}.check-card h3{font-size:18px;margin:0 0 10px}.check-line{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:2px dotted #c7bfb7;cursor:pointer;font-size:14px}.check-line:last-child{border-bottom:0}.check-line input{appearance:none;border:2px solid var(--ink);background:#fff;width:25px;height:25px;flex:0 0 25px;border-radius:7px;margin:0;display:grid;place-items:center}.check-line input:checked{background:var(--leaf)}.check-line input:checked:before{content:'✓';font-size:20px;font-weight:900;line-height:1}.check-line:has(input:checked) .check-text{text-decoration:line-through;opacity:.55}.check-card p{font-size:12px;color:#5e5753}.shop-layout{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.shop-card{padding:13px 16px}.shop-card .check-line{border:0;padding:3px 0}.shop-card strong{font-size:15px;line-height:1.4}.shop-detail{font-size:12px;color:#655f5a;margin:7px 0 0 35px}.shop-tag{display:inline-block;margin:8px 0 0 35px;padding:3px 9px;border:2px solid var(--ink);border-radius:99px;background:var(--yellow);font-size:11px;font-weight:900}.progress{border:2px solid var(--ink);border-radius:100px;background:var(--leaf);padding:5px 11px;font-weight:900;font-size:12px;white-space:nowrap}.disclaimer{font-size:12px;color:#746c64;line-height:1.7;margin-top:11px}.footer{padding:23px 10px 8px;margin-top:60px;border-top:var(--stroke);font-size:12px;text-align:center;color:#766d64}.footer strong{display:block;font-size:14px;color:var(--ink);margin-bottom:6px}.bottomnav{display:none}.empty-state{border:2px dashed var(--ink);border-radius:18px;padding:23px;text-align:center;background:#fff7e7}
+@media(max-width:850px){.desktopnav{display:none}.quicknav{grid-template-columns:repeat(2,1fr)}.overview{grid-template-columns:repeat(2,1fr)}.hotel-grid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1.1fr .9fr}.hero-text{padding:24px}.hero h1{font-size:44px}}
+@media(max-width:600px){html{scroll-padding-top:80px}.topinner{padding:9px 14px}.logo{font-size:15px}.logo-mark{width:35px;height:35px}.wrapper{padding:16px 14px 108px}.hero{display:flex;flex-direction:column;border-radius:24px;min-height:unset;gap:0;box-shadow:4px 4px 0 var(--ink)}.hero-text{padding:21px 20px 5px}.hero h1{font-size:42px;line-height:1.13;margin:8px 0}.hero-lede{font-size:14px;line-height:1.55;margin:9px 0 11px}.hero-pills{gap:6px}.hero-pill{font-size:11px;padding:3px 8px}.hero-art{padding:0 8px 0 8px;margin-top:-4px}.hero-art svg{height:165px;width:100%}.quicknav{margin:18px 0 32px;gap:9px}.quick{min-height:58px;padding:8px;gap:8px;font-size:12px;border-radius:16px;box-shadow:2px 2px 0 var(--ink)}.quick-graphic{width:34px;height:34px}.section{margin-top:37px}.section-top{align-items:center;margin-bottom:12px}.section-lead{font-size:11px}.section h2{font-size:25px}.overview{gap:9px}.overview-card{padding:11px 12px;min-height:117px;border-radius:17px}.overview-card span{font-size:11px}.overview-card strong{font-size:14px}.date-row{gap:7px}.date-btn{flex-basis:85px;min-height:87px;padding:7px 4px}.date-btn b{font-size:21px}.day-panel{border-radius:21px;padding:14px 12px 21px;box-shadow:4px 4px 0 var(--ink)}.day-titleline h3{font-size:25px}.day-mark{width:61px;height:61px}.day-mark b{font-size:19px}.day-facts{grid-template-columns:1fr;gap:6px;margin:14px 0}.day-fact{font-size:12px;padding:9px 10px}.timeline{padding-left:27px}.timeline:before{left:9px}.entry:before{left:-27px;width:15px;height:15px}.entry-card{padding:12px 12px 13px;border-radius:16px}.entry h4{font-size:17px}.entry-time{font-size:12px}.entry p{font-size:12px}.entry-actions{gap:6px}.link-chip{padding:5px 8px;font-size:11px}.flight-grid,.hotel-grid,.check-layout,.shop-layout{grid-template-columns:1fr;gap:10px}.hotel-grid{margin-top:11px}.flight-card{padding:16px}.flight-code{font-size:21px}.route-place strong{font-size:29px}.section-sub{font-size:10px}.day-notes{padding:12px 14px}.day-bottom button{font-size:12px;padding:7px 11px}.bottomnav{display:flex;position:fixed;z-index:90;bottom:0;left:0;right:0;background:var(--paper);border-top:var(--stroke);padding:7px 4px calc(6px + env(safe-area-inset-bottom));justify-content:space-around}.bottomnav a{display:grid;justify-items:center;gap:2px;min-width:55px;padding:1px;color:var(--ink);font-size:10px;font-weight:900}.bottomnav svg{width:23px;height:23px}.footer{margin-top:45px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.more-detail{margin-top:12px;border:2px solid var(--ink);border-radius:13px;background:#FFFCF6;overflow:hidden}.more-detail summary,.shop-extra summary{list-style:none;cursor:pointer;font-size:13px;font-weight:900;padding:11px 13px;min-height:43px;display:flex;align-items:center;justify-content:space-between;gap:8px}.more-detail summary::-webkit-details-marker,.shop-extra summary::-webkit-details-marker,.guide-card summary::-webkit-details-marker,.price-panel summary::-webkit-details-marker{display:none}.more-detail summary:after,.shop-extra summary:after{content:'＋';font-size:19px;line-height:1}.more-detail[open] summary:after,.shop-extra[open] summary:after{content:'－'}.toggle-word{margin-left:auto;font-size:11px;color:#736c63}.more-detail[open] .toggle-word{font-size:0}.more-detail[open] .toggle-word:after{content:'收起';font-size:11px}.more-body{padding:0 12px 13px;border-top:2px dashed #c8bbb0}.more-body ul,.shop-extra ul,.guide-card ul{font-size:13px;line-height:1.7;margin:12px 0;padding-left:20px;color:#4d4944}.more-body li+li,.shop-extra li+li,.guide-card li+li{margin-top:8px}.evidence-note{font-size:11px;color:#777069;margin-top:11px;padding-top:9px;border-top:1px dashed #cdc4bc}.more-body .entry-actions{margin-top:13px}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.guide-card{border:3px solid var(--ink);border-radius:19px;overflow:hidden;background:#eaf5fa}.guide-card.yellow{background:#fff4d6}.guide-card.leaf{background:#edf6e5}.guide-card.coral{background:#fcedea}.guide-card summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px}.guide-card summary strong{font-size:15px;flex:1;line-height:1.35}.guide-stamp{font-size:11px;font-weight:900;border:2px solid var(--ink);border-radius:100px;background:white;padding:4px 9px;white-space:nowrap}.guide-chevron{font-weight:900;font-size:23px;line-height:1}.guide-card[open] .guide-chevron{transform:rotate(45deg)}.guide-content{border-top:2px dashed var(--ink);padding:2px 15px 11px}.guide-alert{border:2px dashed var(--ink);border-radius:15px;background:#fff;padding:11px 14px;margin:0 0 14px;font-size:13px}.guide-jump{display:inline-block;background:var(--yellow);border:2px solid var(--ink);font-size:12px;font-weight:900;border-radius:12px;padding:9px 12px;margin:0 0 13px}.shop-extra{border:2px solid var(--ink);border-radius:12px;background:var(--paper);margin-top:13px}.shop-extra summary{font-size:12px}.shop-extra ul{margin:2px 11px 12px}.price-panel{background:#fff;border:3px solid var(--ink);border-radius:17px;margin-top:14px;overflow:hidden}.price-panel summary{font-weight:900;padding:13px 16px;cursor:pointer;background:var(--yellow)}.price-panel summary:after{content:'＋';float:right}.price-panel[open] summary:after{content:'－'}.price-wrap{overflow-x:auto}.price-panel table{border-collapse:collapse;width:100%;min-width:400px;font-size:12px;text-align:left}.price-panel th,.price-panel td{padding:9px 12px;border-bottom:1px solid #ddd}.price-panel th{background:#f9f1e6}.price-panel p{font-size:12px;color:#655f5a;padding:0 13px 12px;margin:10px 0}.guide-card summary:focus-visible,.more-detail summary:focus-visible,.price-panel summary:focus-visible,.shop-extra summary:focus-visible{outline:3px solid #287cad;outline-offset:-3px}
+@media(max-width:600px){.guide-grid{grid-template-columns:1fr;gap:10px}.guide-card summary{padding:12px 11px}.guide-card summary strong{font-size:14px}.guide-stamp{padding:3px 6px;font-size:10px}.more-body ul,.guide-card ul,.shop-extra ul{font-size:12px}}
+
+/* v0.4 price and active-source research catalog */
+.fx-box{display:flex;align-items:stretch;justify-content:space-between;gap:18px;border:var(--stroke);border-radius:24px;background:var(--yellow);padding:22px;box-shadow:var(--offset)}
+.fx-box>div:first-child{flex:1}.fx-box .eyebrow{font-size:11px;letter-spacing:.12em}.fx-label{display:block;margin:4px 0 8px;font-size:18px;font-weight:900}.fx-label input{background:white;width:112px;padding:7px 8px;border:2px solid var(--ink);border-radius:10px;font-weight:900;text-align:center}.fx-box p,.fx-box small{color:#61594c;font-size:12px;margin:4px 0 0}.fx-fee{min-width:145px;max-width:205px;padding-left:15px;border-left:2px dashed #a89372}.fx-fee label{font-size:12px;font-weight:850}.fx-fee div{display:flex;align-items:center;gap:5px;margin:6px 0}.fx-fee input{background:white;border:2px solid var(--ink);border-radius:10px;padding:7px;width:84px;text-align:center;font-weight:900}
+.compare-note,.library-info{font-size:13px;color:#554f48;margin:17px 0 13px;line-height:1.75}.compare-note{border-left:5px solid var(--coral);padding:8px 13px;background:#fff3ee;border-radius:0 12px 12px 0}.price-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.price-card{border:var(--stroke);border-radius:20px;padding:16px;background:white;min-width:0}.price-card:nth-child(4n+1){background:#f9f3e8}.price-card:nth-child(4n+2){background:#eef6e9}.price-card:nth-child(4n+3){background:#edf7fb}.price-card:nth-child(4n+4){background:#fff0ec}.price-top{display:flex;align-items:start;justify-content:space-between;gap:8px}.price-top h3{font-size:16px;line-height:1.4;margin:0 0 10px}.unit-chip{white-space:nowrap;font-size:10px;font-weight:800;border:1.5px solid var(--ink);border-radius:50px;padding:3px 7px;background:white}.tw-price{font-size:14px}.tw-price b{font-size:22px}.tw-yen{font-size:13px;margin-top:6px;border-top:2px dashed #bcb7ae;padding-top:7px}.tw-yen strong{color:#345c6e;font-size:20px;margin-left:6px}.jp-price-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:9px;margin:13px 0}.jp-price-grid label{font-size:11px;font-weight:850;line-height:1.5;min-width:0}.jp-price-grid input{display:block;width:100%;font-size:16px;font-weight:850;padding:10px 9px;border:2px solid var(--ink);border-radius:10px;background:white;margin-top:5px}.price-result{background:#fff;border:2px dashed #978e85;border-radius:12px;padding:12px;color:#685e56;font-size:13px;min-height:51px}.price-result.cheaper{background:#e5f4dd;border-color:#64816b;color:#274a36}.price-result.more-expensive{background:#fff1ea;border-color:#bd7868;color:#8a4537}.price-result strong{display:block;font-size:20px;line-height:1.45}.price-result span{display:block;font-size:12px;margin-top:4px}.price-result small{display:block;font-size:11px;margin-top:5px;color:#645c55}.unit-note{font-size:12px;margin:10px 0 2px;color:#5c544e}.snapshot{font-size:10px;margin:2px 0 0;color:#756b60}.compare-foot{border-top:1.5px dashed #b6afa4;margin-top:14px;padding-top:10px;color:#746c63;font-size:11px;line-height:1.7}.shop-linker{font-size:12px;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:8px}.shop-linker a{border:2px solid var(--ink);background:var(--yellow);border-radius:10px;padding:6px 9px;text-decoration:none;font-weight:900}
+.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.library-category{border:var(--stroke);border-radius:20px;background:#fff3ed;padding:15px;min-width:0}.library-category.yellow{background:#fff6e0}.library-category.blue{background:#eaf5fa}.library-category.leaf{background:#eef5e8}.library-category h3{font-size:18px;margin:0 0 9px}.library-category details{background:#fffdf8;border:2px solid var(--ink);border-radius:11px;margin:7px 0;overflow:hidden}.library-category summary{list-style:none;cursor:pointer;font-weight:850;padding:10px;font-size:12px;min-height:43px}.library-category summary::-webkit-details-marker{display:none}.library-category summary:after{content:'＋';float:right;font-size:17px;line-height:1}.library-category details[open] summary:after{content:'－'}.library-category details p{font-size:12px;line-height:1.75;margin:0;border-top:1px dashed #bdb6a8;padding:10px;color:#504a45}
+@media(max-width:600px){.fx-box{padding:13px;gap:9px;display:block}.fx-fee{border-left:0;border-top:2px dashed #a89372;padding:10px 0 0;margin-top:12px;max-width:none}.fx-fee div{display:inline-flex;margin-right:8px}.fx-label input{width:105px}.price-layout,.library-grid{grid-template-columns:1fr}.price-top h3{font-size:15px}.price-card{padding:13px}.unit-chip{font-size:9px}.price-result strong{font-size:19px}}
+
+
+/* v0.5: seven-day itinerary is the primary landing screen */
+.trip-summary{margin:0 0 14px;border:3px solid var(--ink);border-radius:24px;padding:19px 18px;background:#eaf4f8;box-shadow:4px 4px 0 var(--ink)}
+.trip-summary-top{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:0 0 14px}.trip-summary-top h2{font-size:clamp(21px,3vw,29px);margin:3px 0}.trip-summary-go{font-weight:900;border:2px solid var(--ink);border-radius:10px;padding:7px 10px;background:var(--yellow);white-space:nowrap;font-size:12px;text-decoration:none}
+.trip-overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.trip-overview-item{text-align:left;display:flex;align-items:flex-start;gap:10px;border:2px solid var(--ink);border-radius:14px;background:#fffdf8;padding:11px;min-width:0;cursor:pointer}.trip-overview-item:nth-child(4n+1){background:#fff2e9}.trip-overview-item:nth-child(4n+2){background:#fff9e3}.trip-overview-item:nth-child(4n+3){background:#eef7e8}.trip-overview-item:nth-child(4n+4){background:#f1f4fb}.trip-overview-meta{display:grid;justify-items:center;gap:2px;flex:0 0 51px;border-right:2px dashed #b0a8a0;padding:3px 8px 3px 0}.trip-overview-meta strong{font-size:11px;white-space:nowrap}.trip-overview-meta span{font-weight:900;font-size:15px}.trip-overview-content{display:grid;gap:3px;flex:1;min-width:0}.trip-overview-content strong{font-size:16px}.trip-overview-content>span{font-size:12px;line-height:1.55}.trip-overview-content small{font-size:10px;color:#655c56;line-height:1.5}.trip-overview-arrow{font-size:18px;color:#726b64}.overview-caveat{color:#5e5850;line-height:1.65;font-size:11px;margin:10px 0 0}
+#days{margin-top:19px}.hero{margin-top:37px}
+/* v0.5: price comparison within the same shopping list, instead of a separate price page */
+.shop-layout{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-card{min-width:0}
+.inshop-compare{margin-top:12px;border:2px dashed var(--ink);border-radius:14px;background:#fffdf8;padding:11px}.inshop-head{display:flex;gap:6px;justify-content:space-between;flex-wrap:wrap;font-weight:900;font-size:12px;margin-bottom:10px}.inshop-head span{font-size:10px;font-weight:650;color:#6d655d}
+.compare-values{display:grid;grid-template-columns:1fr 1fr;gap:7px}.compare-values>div{min-width:0;background:#fff;border:2px solid #3e3a39;border-radius:11px;padding:9px 7px;display:grid;gap:3px}.compare-values .discount-cell{grid-column:1/-1;background:#f2f5ed}.compare-values small{font-size:10px;color:#5a5551}.compare-values strong{font-size:18px;white-space:nowrap}.compare-values em{font-size:10px;font-style:normal;color:#696059}.compare-values .discount-cell strong{font-size:25px;color:#3c6351}.inshop-compare[data-result-state="expensive"] .discount-cell{background:#fff0e8}.inshop-compare[data-result-state="expensive"] .discount-cell strong{color:#9b4b3b}
+.jp-price-grid{grid-template-columns:1fr 1fr}.jp-price-grid input{font-size:14px;min-width:0}.unit-note{line-height:1.55}.fx-box{margin-top:15px}
+@media(max-width:850px){.trip-overview-grid{grid-template-columns:1fr}.shop-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.trip-summary{padding:13px 10px;margin-bottom:12px;border-radius:19px}.trip-summary-top h2{font-size:22px;line-height:1.35}.trip-summary-go{padding:6px 7px;font-size:11px}.trip-overview-item{padding:9px 8px;gap:8px}.trip-overview-meta{flex-basis:46px;padding-right:6px}.trip-overview-meta span{font-size:14px}.trip-overview-content strong{font-size:14px}.trip-overview-content>span{font-size:12px}.trip-overview-content small{font-size:10px}.hero{margin-top:33px}.jp-price-grid label{font-size:10px}.compare-values strong{font-size:17px}}
+
+
+.price-shortcuts{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:10px 0 15px}.price-shortcuts span{font-size:11px;font-weight:850}.price-shortcuts a{border:2px solid var(--ink);background:white;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800;text-decoration:none}.price-shortcuts a:hover{background:var(--leaf)}.shop-card{scroll-margin-top:90px}
+@media(max-width:600px){.trip-summary-top{flex-direction:column;align-items:stretch;gap:6px}.trip-summary-top h2{font-size:21px}.trip-summary-go{align-self:flex-start}.fx-label{display:flex;align-items:center;gap:6px;flex-wrap:wrap;line-height:1.55}.price-shortcuts{gap:6px}}
+
+/* v0.6: cover → countdown → seven-day index → native detail pages */
+html{scroll-padding-top:84px}#trip-summary,#days,#home,.day-sheet{scroll-margin-top:82px}
+.hero{margin-top:0!important;margin-bottom:18px!important}
+.countdown-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 18px;background:#fffaf0;border:3px solid var(--ink);border-radius:24px;box-shadow:4px 4px 0 var(--ink);padding:18px 22px;margin:0 0 22px}
+.countdown-copy h2{font-size:clamp(21px,3vw,30px);margin:5px 0 7px}.countdown-copy p{color:#655d54;margin:0;font-size:12px;line-height:1.6}
+.countdown-values{display:flex;gap:7px;align-items:center}.countdown-tile{min-width:66px;display:grid;justify-items:center;gap:0;border:2px solid var(--ink);border-radius:14px;background:#f6d27a;padding:8px 10px}.countdown-tile:nth-child(2){background:#a8d3e6}.countdown-tile:nth-child(3){background:#bed7ac}.countdown-tile strong{font-size:clamp(29px,4vw,43px);line-height:1.18;font-weight:900;font-variant-numeric:tabular-nums}.countdown-tile small{font-size:12px;font-weight:850}
+.countdown-foot{grid-column:1/-1;color:#726c64;font-size:11px;line-height:1.6;margin:0}
+.trip-overview-item{color:var(--ink)!important;text-decoration:none!important;-webkit-tap-highlight-color:rgba(242,164,151,.25);touch-action:manipulation}
+.trip-overview-item:focus-visible{outline:3px solid #287cad;outline-offset:2px}
+#days{margin:36px 0 25px}.detail-intro{background:#fff8e8;border:2px dashed var(--ink);padding:11px 13px;border-radius:15px;font-size:13px;line-height:1.65;margin:12px 0 17px}
+.day-sheet{background:#fff;border:3px solid var(--ink);border-radius:23px;box-shadow:4px 4px 0 var(--ink);margin-bottom:15px;overflow:hidden}
+.day-sheet-toggle{list-style:none;cursor:pointer;display:flex;align-items:center;gap:15px;background:#fff0e9;padding:17px 19px;position:relative;min-height:83px}.day-sheet:nth-of-type(4n+2)>.day-sheet-toggle{background:#fff6d9}.day-sheet:nth-of-type(4n+3)>.day-sheet-toggle{background:#edf5e6}.day-sheet:nth-of-type(4n+4)>.day-sheet-toggle{background:#e8f3f8}
+.day-sheet-toggle::-webkit-details-marker{display:none}.day-sheet-num{font-weight:900;letter-spacing:.05em;white-space:nowrap;flex:0 0 78px;display:grid;font-size:15px;border-right:2px dashed #b8afa6}.day-sheet-num small{letter-spacing:normal;font-size:12px;margin-top:3px}.day-sheet-title{flex:1;min-width:0;display:grid;gap:5px}.day-sheet-title strong{font-size:21px;line-height:1.2}.day-sheet-title small{font-size:12px;color:#6c6259;line-height:1.5}.day-sheet-indicator{font-size:25px;font-weight:700}.day-sheet[open]>.day-sheet-toggle .day-sheet-indicator{transform:rotate(45deg)}
+.day-sheet-body{padding:12px 18px 18px}.day-route-brief{background:#f6f8f7;border:1.5px solid #c9c5be;border-radius:13px;padding:10px 13px;margin:1px 0 16px}.day-route-brief p{font-size:12px;margin:3px 0;line-height:1.55;overflow-wrap:anywhere}
+.day-timeline{display:grid;gap:13px}.day-timeline>.entry{margin:0;min-width:0}.day-timeline>.entry>.entry-card{min-width:0}
+.day-sheet-footer{display:flex;justify-content:space-between;gap:12px;margin-top:20px;font-size:12px;font-weight:900}.day-sheet-footer a{border:2px solid var(--ink);border-radius:12px;background:#fff6d9;padding:8px 12px;color:var(--ink);text-decoration:none}.day-sheet-footer a:last-child{background:#e8f3f8}
+@media(max-width:700px){.countdown-card{grid-template-columns:1fr;padding:16px 14px}.countdown-values{justify-content:flex-start}.countdown-tile{min-width:72px}.countdown-foot{grid-column:1}.day-sheet-toggle{padding:13px 11px;gap:9px}.day-sheet-num{flex-basis:69px;font-size:13px}.day-sheet-title strong{font-size:18px}.day-sheet-body{padding:11px 11px 15px}.day-sheet-footer a{padding:8px}.trip-summary{margin-top:4px}}
+@media(max-width:370px){.countdown-tile{min-width:60px;padding:6px}.countdown-tile strong{font-size:28px}.day-sheet-title strong{font-size:16px}.day-sheet-num{flex-basis:61px}.day-sheet-footer{font-size:11px}}
+
+
+/* Inline per-day accordion: the seven summary cards ARE the detailed itinerary. */
+.trip-overview-grid{display:grid!important;grid-template-columns:1fr!important;gap:12px}
+.trip-overview-expand{margin:0;border:3px solid var(--ink);border-radius:20px;background:#fffdf8;overflow:hidden;scroll-margin-top:80px;box-shadow:3px 3px 0 var(--ink)}
+.trip-overview-expand>.trip-overview-item{list-style:none;display:flex;align-items:center;width:100%;min-height:92px;margin:0;border:0!important;border-radius:0!important;box-shadow:none!important;cursor:pointer;color:var(--ink);padding:12px 14px}
+.trip-overview-expand>.trip-overview-item::-webkit-details-marker{display:none}
+.trip-overview-expand[open]>.trip-overview-item{border-bottom:3px solid var(--ink)!important}
+.trip-overview-expand>.day-sheet-body{padding:14px 15px 18px;background:#fffdf8}
+.trip-overview-expand:nth-child(4n+1)>.trip-overview-item{background:#fff2e9}
+.trip-overview-expand:nth-child(4n+2)>.trip-overview-item{background:#fff9e3}
+.trip-overview-expand:nth-child(4n+3)>.trip-overview-item{background:#eef7e8}
+.trip-overview-expand:nth-child(4n+4)>.trip-overview-item{background:#f1f4fb}
+.trip-overview-expand[open] .trip-overview-arrow{transform:rotate(90deg)}
+.trip-overview-expand .day-sheet-footer a{color:var(--ink)}
+@media(max-width:600px){.trip-overview-expand>.trip-overview-item{padding:9px 9px;min-height:88px}.trip-overview-expand>.day-sheet-body{padding:11px 9px 16px}.trip-overview-expand .day-route-brief{padding:9px}.trip-overview-expand .entry-card{padding:12px 11px}.trip-overview-expand .entry-card h4{overflow-wrap:anywhere}}
+
+</style>
+</head>
+<body>
+<header class="site-top"><div class="topinner"><a class="logo" href="#home" aria-label="返回首頁"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></span><span>北海道冬日散策</span></a><span class="mini-stamp">2027 FEB</span><nav class="desktopnav" aria-label="頁面導覽"><a href="#trip-summary">七天行程</a><a href="#flights">交通住宿</a><a href="#shopping">購物</a><a href="#tasks">行李・待辦</a></nav></div></header>
+<main class="wrapper"><section class="hero" id="home" aria-label="北海道冬季旅行首頁">
+ <div class="hero-text"><div class="eyebrow">HOKKAIDO · WINTER STORYBOOK</div><h1><span class="little">北海道・冬の旅</span>一起去，<br>雪國散步。</h1><p class="hero-lede">7 天 6 夜，把札幌雪祭、小樽雪燈、二世谷滑雪，一頁頁收進旅行手帳。</p><div class="hero-pills"><span class="hero-pill">2027.02.08 — 02.14</span><span class="hero-pill">2 人旅行</span><span class="hero-pill">互動手帳 · v0.6</span></div></div>
+ <div class="hero-art" aria-label="札幌雪景與企鵝手繪插圖" role="img">
+ <svg viewBox="0 0 540 296" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g stroke="#3E3A39" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+   <g class="cloud-moving"><path d="M316 50c9-14 29-12 35 1 18-9 34 2 33 13H285c-5-10 4-20 19-19z" fill="#FFFCF6"/><path d="M408 76c12-18 35-12 37 1 18-8 33 4 30 13h-90c0-12 12-18 23-14z" fill="#FFFCF6"/></g>
+   <path d="M2 259c76-80 143-83 231-30 86-100 167-99 303 2v66H2z" fill="#FFFCF6"/>
+   <path d="M32 290c81-48 132-51 220-21 84-51 182-55 274-11v38H32z" fill="#A8D3E6"/>
+   <g transform="translate(278 59)"><path d="M49 0L45 147M12 56h78M24 86h51" fill="none"/><path d="M28 147L49 4l22 143" fill="#F2A497"/><path d="M36 35h27M30 65h39M25 100h47M18 142h61"/><path d="M34 19h29"/><path d="M42 0h14"/></g>
+   <g transform="translate(420 133)"><path d="M27 5L0 59h17l-18 27h56L39 59h14z" fill="#B9DAA5"/><path d="M25 20L9 54M32 54l9 18" stroke-width="3"/><path d="M27 86v27"/></g>
+   <g transform="translate(81 141)"><path d="M26 4L2 59h17L0 86h59L41 59h18z" fill="#B9DAA5"/><path d="M29 26L14 59M27 86v28" stroke-width="3"/></g>
+   <g class="penguin-moving" transform="translate(166 143)"><ellipse cx="49" cy="97" rx="39" ry="61" fill="#3E3A39"/><ellipse cx="49" cy="102" rx="27" ry="42" fill="#FFFCF6"/><path d="M17 90C0 96 1 112 7 120l12-1M82 90c18 4 19 23 10 30l-11-3" fill="#3E3A39"/><ellipse cx="37" cy="64" rx="3" ry="4" fill="#3E3A39" stroke="none"/><ellipse cx="64" cy="64" rx="3" ry="4" fill="#3E3A39" stroke="none"/><path d="M46 73l7 0-4 7z" fill="#F6D27A"/><path d="M36 135l-10 16 23-2M64 134l12 17-22-2" fill="#F6D27A"/><path d="M25 38c21 10 40 11 61 2l-2 18c-23 9-46 8-60-1z" fill="#F2A497"/><path d="M74 56l5 21 12-11-7-20" fill="#F2A497"/></g>
+   <g transform="translate(383 234)"><path d="M0 23h107" fill="none"/><path d="M16 5L22 20h70L98 5" fill="#F6D27A"/><path d="M29 0h61"/><circle cx="29" cy="25" r="5" fill="#3E3A39"/><circle cx="82" cy="25" r="5" fill="#3E3A39"/></g>
+   <g fill="#fff"><circle cx="29" cy="88" r="4"/><circle cx="113" cy="41" r="4"/><circle cx="488" cy="23" r="4"/><circle cx="475" cy="127" r="4"/></g>
+   <g stroke-width="3" fill="none"><path d="M105 70v20m-10-10h20M487 102v18m-9-9h18M372 20v17m-8-9h16"/></g>
+  </g></svg></div>
+</section>
+<section class="countdown-card" id="departure-countdown" aria-label="北海道出發倒數">
+<div class="countdown-copy"><span class="eyebrow">THE JOURNEY STARTS IN</span><h2>距離雪國出發，還有</h2><p>FD242 · 2027/02/08（週一）07:15 · 台灣時間</p></div>
+<div class="countdown-values"><span class="countdown-tile"><strong id="countdown-days">88</strong><small>天</small></span><span class="countdown-tile"><strong id="countdown-hours">15</strong><small>小時</small></span><span class="countdown-tile"><strong id="countdown-minutes">26</strong><small>分鐘</small></span></div>
+<p class="countdown-foot" id="countdown">靜態數字為 2026/11/11 15:49 的參考值；支援 JavaScript 的瀏覽器會自動更新。航班時刻仍需出發前再次確認。</p>
+</section>
+<section id="trip-summary" class="trip-summary"><div class="trip-summary-top"><div><span class="eyebrow">SEVEN DAYS · THE REAL ITINERARY</span><h2>北海道七天行程</h2></div><span class="trip-summary-go">點卡片展開 ↓</span></div><div class="trip-overview-grid" id="trip-overview-grid"><details class="trip-overview-expand" id="day-1"><summary class="trip-overview-item" data-overview-day="0"><span class="trip-overview-meta"><strong>DAY 1</strong><span>2/8</span></span><span class="trip-overview-content"><strong>札幌・雪祭</strong><span>FD242 → 根室花まる → 大通雪祭 → GARAKU</span><small>JR Inn North2｜確認待核</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>JR Inn Sapporo North2｜已見訂單截圖・確認待核實</p><p><b>交通：</b>新千歲機場 → JR 札幌站 → 札幌市中心，JR 搭乘時間尚未指定</p></div><div class="day-timeline">
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">07:15 台灣時間</span><span class="entry-status booked">已訂／航班</span></div><h4>FD242 桃園 T1 起飛</h4><p>泰國亞洲航空，抵達時間請依日本時間看。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>已核對航空公司訂位畫面：FD242，2027/2/8 07:15 自桃園 T1 起飛（台灣時間），12:00 抵達新千歲（日本時間）。</li>
+<li>使用者本人所示航班附加服務含手提 7 kg、託運 20 kg；這不能證明旅伴也有相同額度。</li>
+<li>航班是否準點、報到與登機口以出發前航空公司公告為準。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">12:00 日本時間</span><span class="entry-status booked">已訂／航班</span></div><h4>抵達新千歲機場 CTS</h4><p>航班預定抵達；通關、領行李與入境後再移動。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8D%83%E6%AD%B2%E6%A9%9F%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>CTS 12:00 為日本時間。先完成入境審查、提領行李、海關，再找 JR 新千歲空港站。</li>
+<li>約 13:00 才開始後續 JR 移動，是通關緩衝推估，絕不是已訂好的列車。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">約 13:00 起</span><span class="entry-status plan">估計時間</span></div><h4>搭 JR 前往札幌</h4><p>這是出機場的估計起點，不是已確認的 JR 班次。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8D%83%E6%AD%B2%E7%A9%BA%E6%B8%AF%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>新千歲機場站搭 JR 快速／特別快速 Airport 至札幌站，參考車程約 33–43 分鐘，依實際車種而異。</li>
+<li>抵達後才依當時狀況決定班次，避免航班延誤造成預訂車次落空。</li>
+<li>札幌—富良野區域鐵路周遊券為尚未購買的建議方案；若採用，記得先在 JR 服務窗口兌換／領取。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://www.jrhokkaido.co.jp/global/chinese/index.html" rel="noopener noreferrer" target="_blank">JR 北海道 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">約 14:30–16:00</span><span class="entry-status fixed">必去・已定</span></div><h4>根室花まる JR Tower Stellar Place 店</h4><p>已確定這天吃的晚午餐；現場候位，非預約。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A0%B9%E5%AE%A4%E8%8A%B1%E3%81%BE%E3%82%8B%20JR%E3%82%BF%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%86%E3%83%A9%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9%E5%BA%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a><a class="link-chip secondary" href="https://www.sushi-hanamaru.com/store/details/s03.html?p=a" rel="noopener noreferrer" target="_blank">官方／參考 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>固定 2/8 晚午餐：JR Tower Stellar Place Center 6F，札幌站共構商場。</li>
+<li>一般營業參考 11:00–22:00、最後點餐 21:30；熱門時段可能提前停止發放候位票。2027/2 的營業資訊仍待核對。</li>
+<li>不接受預約，14:30–16:00 只是工作時間窗；若飛機、行李或排隊拖延，應動態調整同日晚餐節奏。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://www.sushi-hanamaru.com/store/details/s03.html?p=a" rel="noopener noreferrer" target="_blank">根室花まる分店官方 ↗</a>
+<a class="link-chip secondary" href="https://www.jr-tower.jp/shop_detail_stellar/125" rel="noopener noreferrer" target="_blank">JR Tower 商場 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">午後～晚間</span><span class="entry-status plan">確認待核</span></div><h4>JR Inn Sapporo North2 寄放行李／入住</h4><p>2/8–2/11 住宿安排未變；目前僅見 IKYU 訂單截圖，尚未核對 Email／平台最新訂房狀態，不能視為正式驗證完成。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E3%82%A4%E3%83%B3%E6%9C%AD%E5%B9%8C%E5%8C%972%E6%9D%A1" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>JR Inn Sapporo North2：2/8 入住、2/11 退房的 IKYU 訂單截圖已提供，但確認 Email／平台訂房狀態尚未核對；不能標為正式已確認訂房。預計雙人禁菸半雙人床房、僅淋浴、不含早餐。</li>
+<li>入住 15:00–24:00、退房 10:00 前；到飯店寄放行李／正式入住的順序取決於晚午餐與排隊時間。</li>
+<li>訂房總額扣點後 ¥69,960；線上信用卡付款方式不代表已成功扣款。訂房代碼與驗證碼刻意不放在公開網頁。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">時段彈性</span><span class="entry-status fixed">必去・已定</span></div><h4>札幌雪祭・大通會場</h4><p>與兩餐串聯；正式 2027 活動時段及人潮需出發前再驗證。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E9%9B%AA%E3%81%BE%E3%81%A4%E3%82%8A%20%E5%A4%A7%E9%80%9A%E4%BC%9A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>雪祭大通會場主要沿大通公園西 1–11 丁目。</li>
+<li>旅遊資料目前列 2027 雪祭 2/4–2/11、大通點燈參考至 22:00；仍需出發前核對當年度細節。</li>
+<li>屬於 Day 1 固定體驗，但開始／結束時刻應配合晚午餐與晚餐排隊，不強制安排單一到達時間。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">約 18:00–19:30</span><span class="entry-status fixed">必去・已定</span></div><h4>GARAKU sitatte sapporo 店</h4><p>已決定的晚餐分店；排隊與賣完可能影響實際用餐。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B9%E3%83%BC%E3%83%97%E3%82%AB%E3%83%AC%E3%83%BC%20GARAKU%20sitatte%20sapporo%20%E5%BA%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a><a class="link-chip secondary" href="https://s-garaku.com/shoplist.php" rel="noopener noreferrer" target="_blank">官方／參考 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>固定分店：スープカレー GARAKU sitatte sapporo 店，札幌市中央區北 2 條西 3 丁目 1-20，札幌フコク生命越山ビル B1F。</li>
+<li>一般晚餐時段參考 17:00–21:00，最後點餐 20:30；可能因湯售完或人潮提早停止受理，2027 需再核對。</li>
+<li>2/8 已選定這間，非已訂位；不能默默改成另一間 GARAKU 或移至 2/10。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://s-garaku.com/shoplist.php" rel="noopener noreferrer" target="_blank">GARAKU 官方店鋪 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">晚上・視體力</span><span class="entry-status option">彈性安排</span></div><h4>薄野雪祭／燈飾散步</h4><p>若抵達日體力允許再走，不為此犧牲休息。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E9%9B%AA%E3%81%BE%E3%81%A4%E3%82%8A%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE%E4%BC%9A%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>薄野會場／燈飾走訪是彈性安排，不犧牲抵達日的休息。</li>
+<li>可由大通沿札幌市中心步行／地鐵一站前往，雪地路面與疲勞度以現場為準。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details><details class="trip-overview-expand" id="day-2"><summary class="trip-overview-item" data-overview-day="1"><span class="trip-overview-meta"><strong>DAY 2</strong><span>2/9</span></span><span class="trip-overview-content"><strong>小樽・雪燈</strong><span>三角市場鱈場蟹 → 堺町 → 小樽運河雪燈</span><small>JR Inn North2｜確認待核</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>JR Inn Sapporo North2｜已見訂單截圖・確認待核實</p><p><b>交通：</b>札幌 ↔ JR 小樽，往返班次未鎖定</p></div><div class="day-timeline">
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">上午</span><span class="entry-status plan">規劃中</span></div><h4>札幌搭 JR 前往小樽</h4><p>北海道冬季步行需預留防滑及轉乘緩衝。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>札幌 → 小樽 JR 是主交通方向，官方一般參考最快約 32 分鐘。</li>
+<li>當天來回車次先保持彈性，等 2027 雪燈之路亮燈與晚餐確定後再銜接；不要把特定列車當已預約。</li>
+<li>三角市場就在小樽站旁，舊版「先去南小樽」的動線已不適用。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">午餐</span><span class="entry-status fixed">必去・已定</span></div><h4>三角市場・帝王蟹／鱈場蟹</h4><p>想吃高品質鱈場蟹的目標固定；店家暫未選定，現場確認重量、價格與烹調。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E4%B8%89%E8%A7%92%E5%B8%82%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>高品質鱈場蟹（タラバガニ）是固定用餐目標；三角市場為暫定主要地點，但店家尚未選。</li>
+<li>目前研究候選：綱岸水產、武田鮮魚店、惠比壽櫻；現場比較不是三家都要去吃。</li>
+<li>購買前確認蟹種、實際重量／單價／總價、料理費、烹調方式、有無座位、候位時間；避免被推銷壓力帶著走。</li>
+<li>若當日吃不到滿意的蟹，2/13 札幌中央場外市場的「おもいで食堂」才是備案，不是二條市場。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">沿路・想吃再買</span><span class="entry-status option">候選</span></div><h4>正福屋 ぱんじゅう</h4><p>使用者想吃的小樽甜點，並非必排行程。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%AD%A3%E7%A6%8F%E5%B1%8B%20%E3%81%B1%E3%82%93%E3%81%98%E3%82%85%E3%81%86%20%E5%B0%8F%E6%A8%BD" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a><a class="link-chip secondary" href="https://xn--t8jzbuh.com/" rel="noopener noreferrer" target="_blank">官方／參考 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>正福屋（小樽市稻穗 2 丁目 9-12）是使用者想試的ぱんじゅう小點心，屬順路候選，不必硬塞進大份帝王蟹午餐後。</li>
+<li>官方一般參考 11:00–18:00，週一休，麵糊售完可能提前結束；2027/2/9 週二營業仍應再核實。</li>
+<li>桑田屋小樽本店一般週二休，不列為這天的主要替代。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://xn--t8jzbuh.com/" rel="noopener noreferrer" target="_blank">正福屋官方 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">下午</span><span class="entry-status plan">規劃中</span></div><h4>堺町通り散策與購物</h4><p>逛商店、甜點、伴手禮，順向前往運河。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E5%A0%BA%E7%94%BA%E9%80%9A%E3%82%8A" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>由小樽站／三角市場往堺町通り散步採買，依店家與天氣彈性停留。</li>
+<li>冬季雪地／結冰會拉長步行時間；原則是順路逛，不為低價伴手禮折返。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">順路加碼</span><span class="entry-status option">順路可選</span></div><h4>かま栄 工場直売店</h4><p>可試パンロール或工場限定品；有餘裕再停。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%8B%E3%81%BE%E6%A0%84%20%E5%B7%A5%E5%A0%B4%E7%9B%B4%E5%A3%B2%E5%BA%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a><a class="link-chip secondary" href="https://kamaei.co.jp/store_introduce/chokubai/" rel="noopener noreferrer" target="_blank">官方／參考 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>かま栄工場直売店：小樽市堺町 3-7，位在堺町通散策動線。</li>
+<li>推薦看工廠與品嚐パンロール、工場限定パンドーム／ウィンナーロール；不是固定購買。</li>
+<li>一般冬季營業參考 09:00–18:00，2027 需再核對。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://kamaei.co.jp/store_introduce/chokubai/" rel="noopener noreferrer" target="_blank">かま栄官方分店 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">傍晚～夜間</span><span class="entry-status fixed">必去・已定</span></div><h4>小樽運河・雪燈之路</h4><p>小樽核心體驗，2027 正式活動日期與亮燈時間仍需驗證。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>小樽運河與雪燈之路是這天固定核心體驗，2027 活動資料列 2/6–2/13。</li>
+<li>實際點燈時間、場地動線、交通管制與雪況屬近日期再確認項目；安排日落後觀賞較有氣氛。</li>
+<li>與晚餐順序保留彈性，返札幌前仍需查實際 JR 時刻。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://otaru.gr.jp/" rel="noopener noreferrer" target="_blank">小樽觀光協會 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">晚餐店家未定</span><span class="entry-status option">候選</span></div><h4>桂苑／なると本店／ニュー三幸</h4><p>三選一待與阿伶討論；不可當成三家都要吃。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>晚餐三選一，全部還是候選，等待與阿伶討論後再決定：</li>
+<li>① 桂苑｜小樽市稻穗 2-16-14，あんかけ焼そば；營業結束時間資料有 19:00 與 20:00 衝突，暫以較保守 19:00 看待。</li>
+<li>② 若鶏時代なると本店｜小樽市稻穗 3-16-13，招牌若鶏半身揚げ；一般營業 11:00–21:00／最後點餐 20:30。</li>
+<li>③ ニュー三幸小樽本店｜小樽市稻穗 1-3-6，あんかけ焼そば；一般 11:30–21:00／最後點餐 20:30。</li>
+<li>選擇需考量午餐蟹量、雪燈時段、排隊與回程車次，不把三間全部排進同一天。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://otaru.gr.jp/project/otarutsu202509-chinese2" rel="noopener noreferrer" target="_blank">桂苑資訊 ↗</a>
+<a class="link-chip secondary" href="https://food-collect.jp/naruto/shops/honten/" rel="noopener noreferrer" target="_blank">なると本店官方 ↗</a>
+<a class="link-chip secondary" href="https://otaru.gr.jp/shop/newsanko" rel="noopener noreferrer" target="_blank">ニュー三幸觀光資訊 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">夜間</span><span class="entry-status plan">規劃中</span></div><h4>JR 回札幌</h4><p>需依實際雪燈活動、用餐和 JR 末班選擇回程。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>從小樽站返回札幌；實際搭乘車次等晚餐店家與雪燈活動時間確定後再選。</li>
+<li>預留冰雪步行／候位緩衝，不要把歷史參考末班車當 2027 已公告。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details><details class="trip-overview-expand" id="day-3"><summary class="trip-overview-item" data-overview-day="2"><span class="trip-overview-meta"><strong>DAY 3</strong><span>2/10</span></span><span class="trip-overview-content"><strong>旭川・動物園</strong><span>旭山動物園 → 梅光軒 → 旭川市中心</span><small>JR Inn North2｜確認待核</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>JR Inn Sapporo North2｜已見訂單截圖・確認待核實</p><p><b>交通：</b>札幌 → JR 特急 → 旭川 → 當地巴士 → 動物園 → 旭川 → JR 札幌</p></div><div class="day-timeline">
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">上午</span><span class="entry-status plan">規劃中</span></div><h4>札幌搭 JR 特急前往旭川</h4><p>特急實際班次／劃位與動物園交通待確認。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%AD%E5%B7%9D%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>初步推薦的特急 Lilac 5：札幌 08:00 → 旭川 09:25；這仍是候選時刻，尚未完成 2027/2/10 當日劃位。</li>
+<li>JR 北海道特急為全車指定席；若購買涵蓋此段的札幌—富良野區域周遊券，可依適用規則劃位。</li>
+<li>抵達旭川後銜接旭山動物園巴士 41／47 號，旭川站 Bus Touch 6 號乘車處。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">白天</span><span class="entry-status plan">規劃中</span></div><h4>旭山動物園</h4><p>主行程；冬季開園、企鵝散步等細節屬日期型驗證。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%AD%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>旭川電氣軌道 41／47 號往旭山動物園，參考車程約 40 分鐘、成人 ¥670；09:55 → 約 10:34 是舊／現有時刻模式候選，不是已公告的 2027/2/10 班次。</li>
+<li>冬季動物園開園參考 10:30–15:30；企鵝散步受積雪／天候影響，當日場次需再核對。</li>
+<li>動物園巴士並非 JR 路線，不能以 JR Pass 乘坐；旭川電氣軌道此線不可假設可刷手機 Suica。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/" rel="noopener noreferrer" target="_blank">旭山動物園官方 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">返回市區後</span><span class="entry-status plan">規劃中</span></div><h4>梅光軒 旭川本店</h4><p>預定品嚐旭川拉麵，保留用餐及排隊彈性。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A2%85%E5%85%89%E8%BB%92%20%E6%97%AD%E5%B7%9D%E6%9C%AC%E5%BA%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>梅光軒旭川本店位於旭川站市中心步行範圍，維持 Day 3 用餐，不因 2/8 GARAKU 決策而替換。</li>
+<li>研究列常見分段營業約 11:00–15:00、17:00–20:30；適合動物園後晚餐，但 2027 日期需核對。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">時間與體力允許</span><span class="entry-status option">順路可選</span></div><h4>旭川冬祭／平和通冰雕</h4><p>不是必去，避免影響回札幌交通。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%AD%E5%B7%9D%E5%86%AC%E3%81%BE%E3%81%A4%E3%82%8A" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>旭川冬祭 2027 參考 2/6–2/11，平和通買物公園與車站／梅光軒相近，優先作為不繞路加碼。</li>
+<li>比起需要再轉車的旭橋河畔主會場，市中心冰雕較順路。</li>
+<li>男山酒造 SAKE PARK 是另外的可選研究點，不屬於核心動線；美瑛／富良野／精靈露臺不在本日正式方向。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">晚上</span><span class="entry-status plan">規劃中</span></div><h4>JR 返回札幌</h4><p>回程班次及雪況需再驗證。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%AD%E5%B7%9D%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>初步目標約 19:00 旭川 → 札幌特急，約 18:00 可作較早備案；車次與開行日未正式核對。</li>
+<li>如果動物園／晚餐拖延，應先確保有可搭乘的指定席，不為冰雕延誤回札幌。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details><details class="trip-overview-expand" id="day-4"><summary class="trip-overview-item" data-overview-day="3"><span class="trip-overview-meta"><strong>DAY 4</strong><span>2/11</span></span><span class="trip-overview-content"><strong>二世谷・初滑</strong><span>札幌 → 二世谷 → Annupuri 單板 → 溫泉</span><small>Niseko Grand Hotel｜飯店已確認</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>Niseko Grand Hotel｜飯店已確認兩位入住</p><p><b>交通：</b>札幌 → 二世谷住宿／滑雪區接駁（細節 12 月重新優化）</p></div><div class="day-timeline">
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">約 07:05 目標</span><span class="entry-status plan">估計時間</span></div><h4>從札幌出發</h4><p>早出發；前晚先買早餐。車班與接駁尚待刷新。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>目前偏好的「早班 JR」路線為札幌 → 小樽 → 倶知安 → 二世谷，**需轉乘兩次**。</li>
+<li>2026 年時刻模式候選：札幌 07:05 → 小樽 07:51；小樽 08:06 → 倶知安 09:23；倶知安 09:50 → 二世谷 10:06。</li>
+<li>上述均非 2027/2/11 官方核定當日班次。前晚先買好方便攜帶的早餐，冬季轉乘時間要留意延誤。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">白天</span><span class="entry-status plan">規劃中</span></div><h4>前往 Niseko Grand Hotel／Annupuri</h4><p>大件行李、當地交通與接駁需確認。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>二世谷大飯店已親自回覆：若最終搭到約 10:06 抵達 JR 二世谷站的火車，可安排車站接駁；「可安排」不等於已完成接駁預約。</li>
+<li>接駁是 JR 二世谷站，不是倶知安站；約 10 分鐘車程至飯店。</li>
+<li>需至少提早 2 天透過 Booking.com 訊息再次預約，建議最晚 2027/2/9 日本時間；若 2/10 才聯絡，優先用飯店 email 並確認會合位置。</li>
+<li>飯店提早寄放行李／接駁至 Annupuri 的細節仍須取得明確答覆。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="mailto:niseko_news@niseko-grand.com" rel="noopener noreferrer" target="_blank">飯店接駁詢問信箱 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">下午・半天</span><span class="entry-status fixed">必去・已定</span></div><h4>Annupuri 初學者單板滑雪</h4><p>滑雪場與運動種類已確定；租具尚未預訂。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%A2%E3%83%B3%E3%83%8C%E3%83%97%E3%83%AA%E5%9B%BD%E9%9A%9B%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>雪場與 snowboard（單板滑雪）已定，2/11 下午與 2/12 上午各規劃半天；兩位都是初學者。</li>
+<li>兩人需要單板＋雪鞋；阿伶另外需要安全帽，雪鏡預計先在台灣買。</li>
+<li>Annupuri 當季 2/11 營業參考 08:30–19:30，五小時纜車票 ¥6,700／成人、全天 ¥7,800（研究時參考價，非最終購票）。</li>
+<li>租具店尚未決定，需優先考慮飯店到貨與現場試鞋／更換的效率。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">晚上</span><span class="entry-status plan">規劃中</span></div><h4>Niseko Grand Hotel 溫泉</h4><p>住宿一晚；餐食方案尚未核實。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%9B%E3%83%86%E3%83%AB" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>Niseko Grand Hotel 已確認 2027/2/11–2/12 一晚、兩位旅客住宿。</li>
+<li>溫泉屬住宿晚間體驗；2/11 晚餐與 2/12 早餐的飯店餐食方案仍未確認。</li>
+<li>附近昆布溫泉地帶步行可達便利商店不可靠，需事先處理飲食安排。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details><details class="trip-overview-expand" id="day-5"><summary class="trip-overview-item" data-overview-day="4"><span class="trip-overview-meta"><strong>DAY 5</strong><span>2/12</span></span><span class="trip-overview-content"><strong>滑雪・薄野</strong><span>Annupuri 上午滑雪 → 札幌 → 達摩本店</span><small>Vessel Campana Susukino｜文件待核</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>Vessel Hotel Campana Susukino｜住宿日期已定，訂房文件待核對</p><p><b>交通：</b>Annupuri → 還租具 → 二世谷 → 札幌／薄野</p></div><div class="day-timeline">
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">上午</span><span class="entry-status fixed">必去・已定</span></div><h4>Annupuri 再滑半天</h4><p>延續初學者單板雪；天氣與現場安全優先。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%A2%E3%83%B3%E3%83%8C%E3%83%97%E3%83%AA%E5%9B%BD%E9%9A%9B%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>2/12 上午延續 Annupuri 單板滑雪，仍以初學者適合雪道、天候與安全為主。</li>
+<li>歸還租具時刻必須與回札幌交通一起倒推；租具尚未付訂。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">滑雪結束後</span><span class="entry-status plan">規劃中</span></div><h4>歸還器材／二世谷返札幌</h4><p>車次、行李與接駁仍待安排，不填假定班表。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%A2%E3%83%B3%E3%83%8C%E3%83%97%E3%83%AA%E5%9B%BD%E9%9A%9B%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>Day 5 回札幌交通仍是重大 OPEN ITEM，尚未決定搭 JR 還是直達巴士。</li>
+<li>候選 JR（現有時刻參考，非 2027/2/12 定班）：二世谷 16:00 → 倶知安 16:16／16:21 → 小樽 17:36／18:00 → 札幌 18:35；參考票價 ¥2,530／人。舊版約 14:46 的 JR 資訊已廢止，不要用。</li>
+<li>候選 Resort Liner：Annupuri 區約 15:55 發車、札幌飯店區約 19:05–19:45 抵達，¥6,000／人，需預約；需核對租具歸還／行李取回後能否趕上。</li>
+<li>先比對完整的飯店—雪場—取行李—站／巴士—札幌路線，不能只看交通工具車程。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">晚間</span><span class="entry-status fixed">必去・已定</span></div><h4>入住 Vessel Hotel Campana Susukino</h4><p>2/12–2/14 住宿日期已確定，正式訂房證明另需驗證。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>Vessel Hotel Campana Susukino 使用者已將 2/12–2/14 住宿日期列為 FIXED，但正式訂房憑證還需另外核對；不能稱為已確認付款。</li>
+<li>飯店靠近薄野站，官方參考由薄野站 4 號出口步行約 4 分鐘。</li>
+<li>2/13、2/14 希望都享用飯店早餐，參考房客 ¥2,300／人／天，06:00–10:00（最後入場約 09:30）；是否含餐／加購未證實。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">晚餐・排隊時間彈性</span><span class="entry-status fixed">必去・已定</span></div><h4>成吉思汗だるま 本店</h4><p>已選定本店；現場候位，不是預約。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E5%90%89%E6%80%9D%E6%B1%97%E3%81%A0%E3%82%8B%E3%81%BE%20%E6%9C%AC%E5%BA%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>成吉思汗だるま 本店（薄野）已確定為 2/12 晚餐；不是「有看到就吃」的候選。</li>
+<li>一般營業參考 17:00–翌日 05:00，不接受預約；19:00–20:00 常排隊、約 21:00 可能較緩，僅為店家參考。</li>
+<li>到達時間須等二世谷回札幌交通與飯店入住動線定案，不能先固定用餐時刻。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">有精神再安排</span><span class="entry-status option">候選</span></div><h4>夜間霜淇淋／札幌夜間聖代</h4><p>只確定想體驗，店名與日期尚未決定。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>想與阿伶體驗札幌夜間霜淇淋或「締めパフェ（收尾聖代）」，偏好薄野附近。</li>
+<li>店家、晚上哪一天、是否要吃都還沒決定，不能排擠達摩本店晚餐或隔天休息。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details><details class="trip-overview-expand" id="day-6"><summary class="trip-overview-item" data-overview-day="5"><span class="trip-overview-meta"><strong>DAY 6</strong><span>2/13</span></span><span class="trip-overview-content"><strong>札幌・散策</strong><span>北海道神宮 → 札幌購物 → 狸小路直播路口</span><small>Vessel Campana Susukino｜文件待核</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>Vessel Hotel Campana Susukino｜住宿日期已定</p><p><b>交通：</b>薄野／札幌市區步行及大眾運輸，實際動線依當天購物調整</p></div><div class="day-timeline">
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">早餐・使用者偏好</span><span class="entry-status option">想體驗</span></div><h4>Vessel 飯店早餐</h4><p>希望 2/13 與 2/14 都吃；尚未證明含在房價、已加購或預訂。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>使用者希望 2/13、2/14 都吃 Vessel 的飯店早餐，但目前未核實房價包含或購買。</li>
+<li>現行房客參考價 ¥2,300／人／天；供應品項、蟹料理與 2027 年實際價錢都屬 DYNAMIC。</li>
+<li>飯店早餐出現的雪蟹（ズワイガニ）不等於原本想吃的鱈場蟹（タラバガニ）。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">上午～下午</span><span class="entry-status plan">規劃中</span></div><h4>北海道神宮</h4><p>札幌行程主軸之一；天候影響步行與參拜時間。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>北海道神宮：由薄野搭南北線至大通、轉東西線往圓山公園，出站後步行約 12–15 分鐘（冰雪路面另留緩衝）。</li>
+<li>二月神宮一般開放參考 07:00–16:00；預估 08:30–10:30 造訪仍可行，但不表示已鎖定具體時間。</li>
+<li>天候不佳時先顧步行安全。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">下午</span><span class="entry-status plan">規劃中</span></div><h4>札幌站／大丸／Stellar Place 購物</h4><p>逛街方向與採買內容保留彈性。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E4%B8%B8%E6%9C%AD%E5%B9%8C%E5%BA%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>北海道神宮回札幌站可由圓山公園搭東西線至大通，轉南北線至札幌站。</li>
+<li>大丸札幌與 JR 札幌站相連，Stellar Place 同區；逛完再往狸小路／薄野方向走，減少折返。</li>
+<li>購物依現場價格與門市庫存判斷，不把僅網路在售視為札幌實體店有貨。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry top-priority"><div class="entry-card"><div class="entry-tags"><span class="entry-time">逛狸小路時</span><span class="entry-status fixed">必去・已定</span></div><h4>狸小路 8／9 丁目直播鏡頭交叉口</h4><p>日期與行程連動已確認，時間不固定；自然經過，不刻意擺拍或妨礙交通。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E8%A7%92%E5%B1%B1%E4%BA%94%E8%A1%9B%E9%96%80%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E6%9C%AD%E5%B9%8C%20%E7%8B%B8%E5%B0%8F%E8%B7%AF" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a><a class="link-chip secondary" href="https://hokkaidodo.jp/tanukikoji8/" rel="noopener noreferrer" target="_blank">官方／參考 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>2/13 逛狸小路時去「狸小路 8 丁目與 9 丁目交叉口」自然經過，時刻不固定。</li>
+<li>辨識地標是三角山五衛門ラーメン一帶；不是狸小路 4 丁目的另一個攝影機。</li>
+<li>直播可能延遲、斷線或視線被擋；業者要求不要對鏡頭揮手、跳舞或刻意擺拍，請站在人行道、遵守號誌。</li>
+<li>若要友人遠端截圖，可直接分享直播頁；不保證事後能找到存檔。</li>
+</ul>
+<div class="entry-actions">
+<a class="link-chip secondary" href="https://hokkaidodo.jp/tanukikoji8/" rel="noopener noreferrer" target="_blank">直播頁／業者 ↗</a>
+</div>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">順路</span><span class="entry-status option">候選</span></div><h4>狸小路商店街・Seicomart 採買</h4><p>選順路門市體驗北海道特色零食，不為小物折返。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%8B%B8%E5%B0%8F%E8%B7%AF%E5%95%86%E5%BA%97%E8%A1%97" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>狸小路商店街與 Seicomart 是既有札幌購物動線的順路候選。</li>
+<li>重點是試北海道特色乳品、熟食或自有品牌零食；Seicomart 並非僅在北海道展店，也不是所有商品都限定北海道。</li>
+<li>門市庫存與促銷價不明，別為單一零食特地繞路。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">有需要才啟用</span><span class="entry-status option">備案</span></div><h4>中央場外市場帝王蟹補吃</h4><p>只有 2/9 沒有吃到滿意的鱈場蟹，才考慮替換部分逛街時間。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8D%B8%E5%A3%B2%E5%B8%82%E5%A0%B4%20%E5%A0%B4%E5%A4%96%E5%B8%82%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>只有 2/9 未能吃到滿意的鱈場蟹，才考慮札幌中央卸賣市場「場外市場」的 おもいで食堂／北海道特産品販売。</li>
+<li>這是使用者以前吃過、印象不錯的店，不是二條市場。</li>
+<li>若改到 2/13，會占用神宮與購物時間，因此保留備案，不主動取代既有路線。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">夜間・尚未選店</span><span class="entry-status option">候選</span></div><h4>札幌深夜霜淇淋／聖代</h4><p>希望和阿伶一起體驗；店家、時間尚未選。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>深夜霜淇淋／收尾聖代是共享體驗想法；目前沒有選定店鋪或時間。</li>
+<li>可在回 Vessel 飯店路上順路找，但不因候選行程犧牲睡眠。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details><details class="trip-overview-expand" id="day-7"><summary class="trip-overview-item" data-overview-day="6"><span class="trip-overview-meta"><strong>DAY 7</strong><span>2/14</span></span><span class="trip-overview-content"><strong>返程・機場</strong><span>Vessel 早餐 → 新千歲 CTS → CI131 返台</span><small>航班 CI131 14:40 日本時間</small></span><span class="trip-overview-arrow">↗</span></summary><div class="day-sheet-body"><div class="day-route-brief"><p><b>住宿：</b>退房｜Vessel Hotel Campana Susukino</p><p><b>交通：</b>札幌 → 新千歲機場 CTS → 桃園 T2</p></div><div class="day-timeline">
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">早上</span><span class="entry-status option">想體驗</span></div><h4>Vessel 飯店早餐</h4><p>希望當天吃飯店早餐；加購／房價包含與供應內容尚未核實。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>Vessel 早餐是 2/14 的使用者偏好，不是已購買或房價已含餐。</li>
+<li>若當天還想去場外市場吃鱈場蟹，會與早餐、退房和機場緩衝衝突；不得兩者都當作已定行程。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">早上・以緩衝為主</span><span class="entry-status plan">規劃中</span></div><h4>飯店退房並前往 CTS</h4><p>目標約 11:30–12:00 抵達機場；JR 實際班次未指定。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8D%83%E6%AD%B2%E7%A9%BA%E6%B8%AF%E9%A7%85" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>預設路線：Vessel 飯店 → 薄野站 → 札幌站 → JR Airport 快速／特別快速 → 新千歲機場。</li>
+<li>工作目標 CTS 約 11:30–12:00 到達，為 14:40 國際線保留報到與冬季鐵路延誤緩衝。</li>
+<li>札幌出發時刻仍待與 2027/2/14 JR 班表及航班報到要求校準。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">僅特定條件</span><span class="entry-status option">備案</span></div><h4>場外市場帝王蟹備案</h4><p>若 2/9 沒吃到才可能考慮；與飯店早餐、機場緩衝互相衝突，不能視為既定行程。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8D%B8%E5%A3%B2%E5%B8%82%E5%A0%B4%20%E5%A0%B4%E5%A4%96%E5%B8%82%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>僅當 2/9 沒吃到好蟹且早晨交通仍有足夠緩衝才考慮。</li>
+<li>おもいで食堂／北海道特産品販売（札幌中央場外市場）現行參考營業 08:30–16:00；2027/2/14 是否營業及是否有鱈場蟹待查。</li>
+<li>此備案不能默默取代 Vessel 早餐或壓縮新千歲機場 11:30–12:00 到達目標。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">14:40 日本時間</span><span class="entry-status booked">已訂／航班</span></div><h4>CI131 新千歲起飛</h4><p>中華航空，勿自行推定 CTS 航廈號碼。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8D%83%E6%AD%B2%E6%A9%9F%E5%A0%B4" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>CI131 已有航空訂位畫面：2027/2/14 14:40 由新千歲起飛，18:15 台灣時間抵達桃園 T2。</li>
+<li>搭機航廈在新千歲的數字代碼沒有於訂位畫面確認，不應標成「CTS T1」。</li>
+<li>返程訂位頁顯示「託運行李 2 件」，使用者另外確認每件 23 kg；但「此額度屬每人或整筆訂位」還需確認。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+<article class="entry"><div class="entry-card"><div class="entry-tags"><span class="entry-time">18:15 台灣時間</span><span class="entry-status booked">已訂／航班</span></div><h4>抵達桃園 T2</h4><p>返台預計時間。</p>
+<div class="entry-actions"><a class="link-chip" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%BA%8C%E8%88%AA%E5%BB%88" rel="noopener noreferrer" target="_blank">地圖導航 ↗</a></div>
+<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>
+<li>目的地桃園國際機場第二航廈，畫面預計 18:15（台灣時間）抵達。</li>
+<li>時差別弄反：日本比台灣快 1 小時；機場現場與航司公告才是最新資訊。</li>
+</ul>
+<div class="evidence-note">以目前北海道專案資料為準。動態班次、營業資訊、價錢及候位須接近旅行日期時再確認。</div></div></details>
+</div></article>
+</div><div class="day-sheet-footer"><a href="#trip-summary">↑ 返回七天總覽</a><a href="#shopping">查看購物清單 →</a></div></div></details></div><p class="overview-caveat">上述為已規劃的每日主動線；用餐候位、冬季車班、接駁與營業日期尚需核實。點選 DAY 1～DAY 7 卡片，直接在原處展開時間軸、地圖與攻略；不用再選一次日期。</p></section>
+<div id="days" hidden><div id="date-row" hidden></div><div id="day-panel" hidden></div></div>
+
+
+
+<div class="quicknav" aria-label="快速前往"><a class="quick" href="#days"><span class="quick-graphic" style="background:var(--coral)" data-icon="calendar"></span>每日行程</a><a class="quick" href="#flights"><span class="quick-graphic" style="background:var(--blue)" data-icon="plane"></span>航班住宿</a><a class="quick" href="#shopping"><span class="quick-graphic" style="background:var(--yellow)" data-icon="bag"></span>採買清單</a><a class="quick" href="#tasks"><span class="quick-graphic" style="background:var(--leaf)" data-icon="check"></span>出發準備</a></div>
+<section id="overview" class="section"><div class="section-top"><div><div class="section-sub">AT A GLANCE</div><h2>旅程小卡</h2></div><div class="section-lead">目前的正式行程與待確認事項分開呈現</div></div><div class="overview"><div class="overview-card"><span class="o-icon" data-icon="snow"></span><span>目的地</span><strong>札幌・小樽<br>旭川・二世谷</strong></div><div class="overview-card"><span class="o-icon" data-icon="train"></span><span>移動方式</span><strong>JR・巴士<br>滑雪區接駁</strong></div><div class="overview-card"><span class="o-icon" data-icon="bed"></span><span>住宿</span><strong>札幌 3 晚<br>二世谷 1 晚・札幌 2 晚</strong></div><div class="overview-card"><span class="o-icon" data-icon="heart"></span><span>旅行重點</span><strong>雪祭・帝王蟹<br>雪燈・單板滑雪</strong></div></div></section>
+<section id="flights" class="section"><div class="section-top"><div><div class="section-sub">FLIGHTS & PLACES TO REST</div><h2>飛行與住宿</h2></div><div class="section-lead">手機直接查看，避免時區弄錯</div></div><a class="guide-jump" href="#guide">看完整 JR 轉乘與滑雪交通攻略 →</a><div class="flight-grid"><article class="flight-card"><div class="flight-top"><b class="flight-code">FD242</b><span class="flight-flag">2 / 8・去程</span></div><div class="route-line"><div class="route-place"><strong>TPE</strong><p>07:15</p><small>台灣時間・T1</small></div><div class="route-arrow" data-icon="arrow"></div><div class="route-place" style="text-align:right"><strong>CTS</strong><p>12:00</p><small>日本時間</small></div></div><p class="flight-note">泰國亞洲航空。通關、領行李後，約 13:00 才開始規劃後續移動（估計，非車班）。</p></article><article class="flight-card"><div class="flight-top"><b class="flight-code">CI131</b><span class="flight-flag">2 / 14・回程</span></div><div class="route-line"><div class="route-place"><strong>CTS</strong><p>14:40</p><small>日本時間</small></div><div class="route-arrow" data-icon="arrow"></div><div class="route-place" style="text-align:right"><strong>TPE</strong><p>18:15</p><small>台灣時間・T2</small></div></div><p class="flight-note">中華航空。出發機場航廈代碼目前未確認，勿將新千歲機場誤標 T1。</p></article></div><div class="hotel-grid"><article class="hotel-card"><span class="hotel-tag">訂單截圖・確認待核</span><h3>JR Inn Sapporo North2</h3><p>2/8–2/11 ・札幌 3 晚</p><p>不含早餐・半雙人房（淋浴）</p><a class="link-chip secondary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=JR%E3%82%A4%E3%83%B3%E6%9C%AD%E5%B9%8C%E5%8C%972%E6%9D%A1">尋找飯店</a></article><article class="hotel-card"><span class="hotel-tag verified">飯店已確認</span><h3>Niseko Grand Hotel</h3><p>2/11–2/12 ・二世谷 1 晚</p><p>已確認 2 位住宿・餐食仍待確認</p><a class="link-chip secondary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko+Grand+Hotel">尋找飯店</a></article><article class="hotel-card"><span class="hotel-tag">日期已定・文件待核</span><h3>Vessel Campana Susukino</h3><p>2/12–2/14 ・札幌 2 晚</p><p>希望 2/13、2/14 都吃飯店早餐，尚未證明含餐</p><a class="link-chip secondary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Vessel+Hotel+Campana+Susukino">尋找飯店</a></article></div></section>
+<section id="guide" class="section"><div class="section-top"><div><div class="section-sub">TINY BUT IMPORTANT TRAVEL NOTES</div><h2>交通・滑雪攻略</h2></div><div class="section-lead">依 Library 既有研究，需核對的仍保持候選</div></div>
+<div class="guide-alert"><b>先看狀態：</b>這裡是 2026/11/11 專案研究快照，不是 2027 正式車票／已訂接駁。藍色資訊卡點一下就能展開。</div>
+<div class="guide-grid"><details class="guide-card blue" open><summary><span class="guide-stamp">票券候選</span><strong>JR 周遊券與 Suica 使用範圍</strong><span class="guide-chevron" aria-hidden="true">＋</span></summary><div class="guide-content"><ul><li>JR 札幌—富良野區域周遊券：目前是「建議購買」而非已買。4 天連續有效，曾參考預購 ¥11,000／成人，擬用 2/8–2/11；需近日期重查票價與販售規則。</li><li>可覆蓋新千歲／札幌／小樽／旭川等區內 JR；不涵蓋一般巴士、札幌地下鐵，也不涵蓋小樽以西往二世谷的區間。</li><li>2/11 若從札幌前往二世谷，應事先買妥小樽—二世谷區間票；手機 Suica 在小樽以西 JR 不可當作可用。</li><li>2/10 旭川特急（Lilac 5 08:00 候選）需要指定席；目前沒有實際已購劃位證據。</li><li>本行程研究估算用區域周遊券相較逐段購票可省約 ¥3,000–3,500／人，實際仍取決於 2/12 交通方式。</li></ul></div></details><details class="guide-card yellow"><summary><span class="guide-stamp">旭川</span><strong>2/10 旭川／旭山動物園怎麼搭</strong><span class="guide-chevron" aria-hidden="true">＋</span></summary><div class="guide-content"><ul><li>2/10 旭川 JR 特急候選 08:00 → 09:25；旭山動物園公車 41／47 從 旭川站 Bus Touch 6 號搭。</li><li>旭山動物園冬季參考營業 10:30–15:30、巴士約 40 分鐘，車資曾約 ¥670／人；企鵝散步看當年雪況。</li><li>旭川站 ↔ 動物園巴士不能用 JR Pass，也不能假設可直接刷手機 Suica。</li></ul></div></details><details class="guide-card leaf"><summary><span class="guide-stamp">前往滑雪</span><strong>2/11 札幌 → 二世谷：兩次轉乘</strong><span class="guide-chevron" aria-hidden="true">＋</span></summary><div class="guide-content"><ul><li>偏好候選：2/11 札幌 07:05 → 小樽 07:51 → 倶知安 09:23 → 二世谷 10:06，當中兩次轉乘；時間仍是 2026 參考模式。</li><li>Niseko Grand Hotel 已書面答覆可以安排「JR 二世谷站」10:06 相容接駁，但尚未實際預約。</li><li>於 2027/1 下旬重查 JR 2/11 時刻；飯店接駁最晚 2/9 以 Booking.com 訊息確認（最好更早），2/10 臨時則用 niseko_news@niseko-grand.com。</li><li>備案：Hokkaido Resort Liner 直達滑雪區巴士，當時參考單程 ¥6,000／成人，較省轉乘，但到達時間較晚，可能壓縮第一天滑雪。</li></ul></div></details><details class="guide-card coral"><summary><span class="guide-stamp">回程待選</span><strong>2/12 二世谷 → 札幌：尚未定案</strong><span class="guide-chevron" aria-hidden="true">＋</span></summary><div class="guide-content"><ul><li>2/12 回札幌仍未決定；暫時比較 JR 三段轉乘 vs. Resort Liner 直達，不要標成已預約。</li><li>JR 參考：二世谷 16:00 → 倶知安 → 小樽 → 札幌 18:35，參考 ¥2,530／人。舊 14:46 車次已不可沿用。</li><li>Resort Liner 參考：Annupuri 區約 15:55 出發，札幌約 19:05–19:45，參考 ¥6,000／人；需另處理租具與行李。</li><li>無論選哪個，2/12 晚餐「達摩本店」保留，但進店時間隨交通與候位浮動。</li></ul></div></details><details class="guide-card yellow"><summary><span class="guide-stamp">滑雪租借</span><strong>單板裝備與租借比較</strong><span class="guide-chevron" aria-hidden="true">＋</span></summary><div class="guide-content"><ul><li>兩人都要 snowboard + boots；阿伶多一頂安全帽；兩人都是 Regular 站姿、以初學者 Standard 裝備為主。</li><li>租板已知參考：使用者 160 cm，阿伶約 147 cm；屬之前試滑紀錄，不一定等同日本租板最終尺寸。</li><li>雪鞋腳長基準：使用者較長腳約 26.5 cm（Mondo 26.5）；阿伶約 24.5 cm（Mondo 24.5）。使用者曾覺 EU 42 磨腳後跟、EU 41 較合適；阿伶穿 EU 38.5 曾有後跟壓迫，需試不同鞋楦。</li><li>候選 A：Niseko Ski Rentals Standard 兩人單板＋雪鞋兩天 ¥22,000，加阿伶安全帽 ¥3,300，研究參考合計 ¥25,300。</li><li>候選 B：Snopro，偏服務／到飯店試穿；研究估價約低 ¥30,000 區間，2026–27 正式報價未確認。</li><li>候選 C：Good Sports，飯店送件可行性較高，但試鞋服務與退還方式要再確認；舊估約 ¥30,000–31,000。</li><li>三者均未預訂；優先確認 2/11 抵達後的飯店交付與合腳試穿，避免吃掉下午滑雪時間。</li></ul></div></details><details class="guide-card blue"><summary><span class="guide-stamp">住宿確認</span><strong>三間飯店，哪些真的已確認？</strong><span class="guide-chevron" aria-hidden="true">＋</span></summary><div class="guide-content"><ul><li>JR Inn Sapporo North2：2/8–2/11 共 3 晚，僅有 IKYU 訂單截圖，確認 Email／實際平台狀態待核；不含早餐，並未取消原有訂單。</li><li>Niseko Grand Hotel：2/11–2/12 一晚、兩位住宿已確認，早餐／晚餐方案與提前寄行李未確認。</li><li>Vessel Hotel Campana Susukino：2/12–2/14 住宿日期已固定，正式訂房憑證仍待核；希望兩天早餐，但是否含餐未證實。</li></ul></div></details></div><p class="disclaimer">本區是既有研究內容，不表示新增行程、已買票或已付款。飯店接駁與滑雪租具仍待後續正式確認。</p></section>
+<section id="shopping" class="section"><div class="fx-box"><div><span class="eyebrow">匯率｜可手動修改・離線保存</span><label for="fx-rate" class="fx-label">1 日圓（¥1）= <input id="fx-rate" class="fx-rate" type="number" min="0.001" max="1" step="0.00001" inputmode="decimal" value="0.21333" aria-label="一日圓等於多少新台幣"> 台幣（NT$）</label><p>0.21333 是示範值，不代表目前銀行報價。出發前可依實際刷卡／換匯匯率更新；離線不會自動更新。</p></div><div class="fx-fee"><label for="fx-fee">海外刷卡費率（自訂）</label><div><input id="fx-fee" type="number" value="0" min="0" max="20" step="0.1" inputmode="decimal"> <strong>%</strong></div><small>預設 0%，可填入實際手續費。</small></div></div><div class="compare-note"><b>購物頁直接比價：</b>台灣售價 → 日本售價換台幣 → 相當於台灣幾折。不同包裝數量依單位價格等量比較；日本實價未知時不提供折扣判斷。</div><div class="section-top"><div><div class="section-sub">SOMETHING TO BRING HOME</div><h2>旅行購物清單</h2></div><span class="progress" id="shop-count">0 / 0</span></div><p class="shop-linker"><a href="#library">查看全部購物研究與備案 →</a></p><nav class="price-shortcuts" aria-label="有台灣售價基準的商品"><span>快速比價：</span><a href="#shop-card-3">新表飛鳴</a><a href="#shop-card-7">合利他命</a><a href="#shop-card-8">札幌農學校</a><a href="#shop-card-9">若元益生菌</a><a href="#shop-card-10">若元胃腸錠</a></nav><div id="shop-layout" class="shop-layout"></div><p class="disclaimer">此處打勾只是目前手機的個人紀錄，不代表已正式購買。若要對比價格及庫存，仍以購物 Master 與現地驗證為準。</p></section>
+<section id="library" class="section"><div class="section-top"><div><div class="section-sub">THE WHOLE TRIP · AT HAND</div><h2>旅行資訊索引</h2></div><div class="section-lead">未排入當日的研究與備案，也有地方可看</div></div><p class="library-info">整理現有 5 份北海道權威狀態／Master，保留實用的研究結論與待辦。舊版方案及取消的候選不重新放回正式每日行程；此處的候選資料不表示已決定或訂購。</p><div class="library-grid"><article class="library-category coral"><h3>美食・行程備案</h3><details><summary>候選｜2/9 小樽晚餐</summary><p>桂苑（あんかけ焼そば）、若鶏時代なると本店（半身炸雞）、ニュー三幸小樽本店（あんかけ焼そば）三選一，尚未與阿伶決定；若餐廳最後點餐與雪燈時間衝突，以當日交通安全優先。</p></details><details><summary>候選｜2/12–13 夜間甜點</summary><p>K.L.I.M Susukino 是深夜霜淇淋候選；夜パフェ専門店 ななかま堂、Parfaiteria miL 是約會型聖代候選。Milk Mura 最後點餐較早，不能當真正午夜後餐廳；佐藤是過往舊店回憶，不強推。</p></details><details><summary>備案｜旭山動物園企鵝</summary><p>若企鵝雪地散步因雪況取消，市區 AOAO SAPPORO 可看室內企鵝，但無法取代戶外國王企鵝雪地散步。2/13 購物路線可評估，非固定行程。</p></details><details><summary>候選｜鱈場蟹</summary><p>2/9 三角市場午餐的高品質鱈場蟹目標已定，市場攤位尚待現場挑選；候選可比綱岸水產、武田鮮魚店、惠比壽櫻。須先確認重量、蟹種、料理費、價格及座位。未達成才考慮 2/13 場外市場おもいで食堂補吃。</p></details></article><article class="library-category yellow"><h3>購物・在地體驗</h3><details><summary>實體店｜大國藥妝</summary><p>已辨識札幌南2条店、狸小路5丁目、MEGA狸小路、札幌大通附近門市；皆僅是順路價格比較候選，沒有指定商品庫存／2027 價格保證。結帳核對品名、數量與收據即可，不對店家指控未經證實的事件。</p></details><details><summary>在地體驗｜Seicomart</summary><p>想順路看 Hot Chef、北海道牛乳、乳製品、地區口味零食與飲料；不是北海道獨家連鎖，也不保證每間都有相同商品。</p></details><details><summary>牛乳筆記｜選擇性試喝</summary><p>既有蒐集的參考清單：特選よつ葉牛乳、よつ葉北海道十勝、函館牛乳、びえい物語 ジャージー牛乳、TOPVALU 石狩牛乳等。前述是消費心得蒐集，非現地供貨證據；1L 牛乳需考慮飯店冷藏／當天飲用。</p></details><details><summary>伴手禮｜魚咬熊</summary><p>有使用者提供的小熊被魚咬住頭部造型照片；品牌、材質、價格與販售地點均未知，僅作遇到再看，不排專程購物站。</p></details><details><summary>補充品／益生菌</summary><p>CP2305 Dear-Natura GOLD、ココカラケア、普通新ビオフェルミンS、森永 BB536 為比較候選，不是都要買；核對實際產品型號、數量及效果宣稱，不以商品宣稱代替臨床證據。</p></details></article><article class="library-category blue"><h3>交通・住宿・滑雪</h3><details><summary>住宿｜JR Inn North2</summary><p>2/8–2/11 住宿安排保持不變。訂單畫面已提供，但未提供／驗證訂房確認 Email，也未查驗平台最新狀態：正式訂房確認待核。非使用者要求取消訂房。</p></details><details><summary>住宿｜Niseko Grand Hotel</summary><p>2/11–2/12 一晚兩人，飯店已回覆確認。JR 二世谷站接送「可安排」但尚未正式預約；提前寄放行李及餐食方案待確認。</p></details><details><summary>住宿｜Vessel Susukino</summary><p>2/12–2/14 日期已選定，正式訂房文件待核。2/13、2/14 希望吃飯店早餐，但未確認房價包含或加購。</p></details><details><summary>車票｜JR Pass</summary><p>札幌—富良野區域周遊券只是研究建議，4 日券曾參考 ¥11,000／人，尚未購買；小樽以西 JR 與動物園巴士不屬涵蓋區段，手機 Suica 使用也有限制。</p></details><details><summary>滑雪｜租具三家</summary><p>Niseko Ski Rentals Standard 兩人＋安全帽參考 ¥25,300；Snopro 與 Good Sports 研究價約 ¥30,000 上下。三家均未訂；最重要是能在 2/11 中午到下午順利送達、試穿與換尺寸。</p></details><details><summary>交通｜二世谷</summary><p>2/11 首選早班 JR 經小樽、倶知安到二世谷，需兩次轉乘；2/12 回程仍在 JR／直達巴士之間待選。飯店接駁與 2027 正式班表尚未核實，不得標成已預訂。</p></details></article><article class="library-category leaf"><h3>出發前注意事項</h3><details><summary>航班｜去程</summary><p>FD242 2/8 07:15 TPE T1 起飛、12:00 CTS 抵達；去程一名旅客附加服務記錄含托運 20kg、手提 7kg；不能據此推斷旅伴額度。</p></details><details><summary>航班｜回程</summary><p>CI131 2/14 14:40 CTS 起飛、18:15 TPE T2 抵達；回程截圖顯示託運 2 件，使用者另外確認每件 23kg，但額度分配對象未核實。</p></details><details><summary>滑雪｜個人物品</summary><p>兩人使用 Regular 站姿；已測腳長約 26.5／24.5cm，阿伶需安全帽；城市防滑冰爪 L 號兩雙只是尺寸選擇，未確定已買，實際雪靴穿上後需檢查是否固定合腳。</p></details><details><summary>網路｜eSIM</summary><p>北海道全程通訊方案仍待決定，au／docomo 為研究候選；飯店／滑雪區實際覆蓋、有效期與方案條款需比較。</p></details><details><summary>時效性驗證</summary><p>2027 雪祭雪燈活動時間、餐廳公休與最後點餐、JR 車次、雪場纜車、接駁時間、購物實體庫存都是動態資訊；目前網頁並非出發前最終更新。</p></details></article></div><p class="compare-foot">來源：2026/11/11 旅行 Library 的 PROJECT_STATE、PLACES_FOOD_SHOPPING_MASTER、TRANSPORT_MASTER、SKI_RENTAL_MASTER、OPEN_ITEMS_MASTER；僅摘取目前仍適用的項目。所有尚未預訂、日期未定、現地價未核的資料均應保持待確認。</p></section>
+<section id="tasks" class="section"><div class="section-top"><div><div class="section-sub">PACK & GET READY</div><h2>出發前小清單</h2></div><span class="progress" id="task-count">0 / 0</span></div><div id="task-layout" class="check-layout"></div><p class="disclaimer">清單保存在這台裝置的瀏覽器儲存空間中，私密瀏覽或本機 HTML 預覽可能不會保留；不會自動同步到 Library 或旅伴的裝置。</p></section>
+<footer class="footer"><strong>HOKKAIDO · OUR WINTER STORY</strong>互動旅行手帳 v0.6・封面→倒數→七天連結→詳細行程<br>資料依北海道 PROJECT_STATE、TRANSPORT、PLACES、SKI RENTAL 等 Master 整理（2026-11-11）。<br>單一 HTML、無封面圖片與背景圖片、僅使用 CSS + SVG 插畫。<br>非即時班次、店家營業或預訂系統，公開前請確認個人資訊。</footer>
+</main>
+<nav class="bottomnav" aria-label="手機快速選單"><a href="#home"><span data-icon="home"></span>首頁</a><a href="#trip-summary"><span data-icon="calendar"></span>行程</a><a href="#guide"><span data-icon="train"></span>攻略</a><a href="#shopping"><span data-icon="bag"></span>購物</a><a href="#tasks"><span data-icon="check"></span>清單</a></nav>
+<script>
+'use strict';
+const DATA={"days":[{"date":"02.08","weekday":"MON","cn":"週一","area":"抵達札幌","subtitle":"雪祭、迴轉壽司與湯咖哩","theme":"#E49D91","stay":"JR Inn Sapporo North2｜已見訂單截圖・確認待核實","transport":"新千歲機場 → JR 札幌站 → 札幌市中心，JR 搭乘時間尚未指定","events":[{"time":"07:15 台灣時間","title":"FD242 桃園 T1 起飛","status":"BOOKED","desc":"泰國亞洲航空，抵達時間請依日本時間看。","map":"桃園國際機場第一航廈","group":"morning","official":null},{"time":"12:00 日本時間","title":"抵達新千歲機場 CTS","status":"BOOKED","desc":"航班預定抵達；通關、領行李與入境後再移動。","map":"新千歲機場","group":"afternoon","official":null},{"time":"約 13:00 起","title":"搭 JR 前往札幌","status":"ESTIMATED","desc":"這是出機場的估計起點，不是已確認的 JR 班次。","map":"新千歲空港駅","group":"afternoon","official":null},{"time":"約 14:30–16:00","title":"根室花まる JR Tower Stellar Place 店","status":"FIXED","desc":"已確定這天吃的晚午餐；現場候位，非預約。","map":"根室花まる JRタワーステラプレイス店","group":"afternoon","official":"https://www.sushi-hanamaru.com/store/details/s03.html?p=a"},{"time":"午後～晚間","title":"JR Inn Sapporo North2 寄放行李／入住","status":"VERIFY","desc":"2/8–2/11 住宿安排未變；目前僅見 IKYU 訂單截圖，尚未核對 Email／平台最新訂房狀態，不能視為正式驗證完成。","map":"JRイン札幌北2条","group":"afternoon","official":null},{"time":"時段彈性","title":"札幌雪祭・大通會場","status":"FIXED","desc":"與兩餐串聯；正式 2027 活動時段及人潮需出發前再驗證。","map":"さっぽろ雪まつり 大通会場","group":"evening","official":null},{"time":"約 18:00–19:30","title":"GARAKU sitatte sapporo 店","status":"FIXED","desc":"已決定的晚餐分店；排隊與賣完可能影響實際用餐。","map":"スープカレー GARAKU sitatte sapporo 店","group":"evening","official":"https://s-garaku.com/shoplist.php"},{"time":"晚上・視體力","title":"薄野雪祭／燈飾散步","status":"FLEX","desc":"若抵達日體力允許再走，不為此犧牲休息。","map":"さっぽろ雪まつり すすきの会場","group":"evening","official":null}],"notes":["兩家餐廳與日期已確定，但沒有訂位。","晚午餐與晚餐間保留雪祭／飯店／排隊緩衝。","FD242 12:00 為日本時間，不是原本過期資料的 11:00。"]},{"date":"02.09","weekday":"TUE","cn":"週二","area":"小樽浪漫雪夜","subtitle":"帝王蟹・堺町・雪燈之路","theme":"#91B7C9","stay":"JR Inn Sapporo North2｜已見訂單截圖・確認待核實","transport":"札幌 ↔ JR 小樽，往返班次未鎖定","events":[{"time":"上午","title":"札幌搭 JR 前往小樽","status":"PLAN","desc":"北海道冬季步行需預留防滑及轉乘緩衝。","map":"小樽駅","group":"morning","official":null},{"time":"午餐","title":"三角市場・帝王蟹／鱈場蟹","status":"FIXED","desc":"想吃高品質鱈場蟹的目標固定；店家暫未選定，現場確認重量、價格與烹調。","map":"小樽三角市場","group":"afternoon","official":null},{"time":"沿路・想吃再買","title":"正福屋 ぱんじゅう","status":"CANDIDATE","desc":"使用者想吃的小樽甜點，並非必排行程。","map":"正福屋 ぱんじゅう 小樽","group":"afternoon","official":"https://xn--t8jzbuh.com/"},{"time":"下午","title":"堺町通り散策與購物","status":"PLAN","desc":"逛商店、甜點、伴手禮，順向前往運河。","map":"小樽堺町通り","group":"afternoon","official":null},{"time":"順路加碼","title":"かま栄 工場直売店","status":"OPTION","desc":"可試パンロール或工場限定品；有餘裕再停。","map":"かま栄 工場直売店","group":"afternoon","official":"https://kamaei.co.jp/store_introduce/chokubai/"},{"time":"傍晚～夜間","title":"小樽運河・雪燈之路","status":"FIXED","desc":"小樽核心體驗，2027 正式活動日期與亮燈時間仍需驗證。","map":"小樽運河","group":"evening","official":null},{"time":"晚餐店家未定","title":"桂苑／なると本店／ニュー三幸","status":"CANDIDATE","desc":"三選一待與阿伶討論；不可當成三家都要吃。","map":"小樽駅","group":"evening","official":null},{"time":"夜間","title":"JR 回札幌","status":"PLAN","desc":"需依實際雪燈活動、用餐和 JR 末班選擇回程。","map":"小樽駅","group":"evening","official":null}],"notes":["帝王蟹目標確定，但三角市場店家尚未決定。","晚餐三家都是候選，未選定、更沒有訂位。","小樽雪燈之路活動與 JR 班次屬出發前重查項目。"]},{"date":"02.10","weekday":"WED","cn":"週三","area":"旭川雪國散策","subtitle":"旭山動物園・旭川拉麵","theme":"#91ADA0","stay":"JR Inn Sapporo North2｜已見訂單截圖・確認待核實","transport":"札幌 → JR 特急 → 旭川 → 當地巴士 → 動物園 → 旭川 → JR 札幌","events":[{"time":"上午","title":"札幌搭 JR 特急前往旭川","status":"PLAN","desc":"特急實際班次／劃位與動物園交通待確認。","map":"旭川駅","group":"morning","official":null},{"time":"白天","title":"旭山動物園","status":"PLAN","desc":"主行程；冬季開園、企鵝散步等細節屬日期型驗證。","map":"旭山動物園","group":"afternoon","official":null},{"time":"返回市區後","title":"梅光軒 旭川本店","status":"PLAN","desc":"預定品嚐旭川拉麵，保留用餐及排隊彈性。","map":"梅光軒 旭川本店","group":"afternoon","official":null},{"time":"時間與體力允許","title":"旭川冬祭／平和通冰雕","status":"OPTION","desc":"不是必去，避免影響回札幌交通。","map":"旭川冬まつり","group":"evening","official":null},{"time":"晚上","title":"JR 返回札幌","status":"PLAN","desc":"回程班次及雪況需再驗證。","map":"旭川駅","group":"evening","official":null}],"notes":["男山酒造／SAKE PARK 僅是備選，不放入核心動線。","美瑛、富良野、精靈露臺目前不在當天主軸。"]},{"date":"02.11","weekday":"THU","cn":"週四","area":"出發二世谷","subtitle":"Annupuri 初學者滑雪・溫泉","theme":"#B4A4C6","stay":"Niseko Grand Hotel｜飯店已確認兩位入住","transport":"札幌 → 二世谷住宿／滑雪區接駁（細節 12 月重新優化）","events":[{"time":"約 07:05 目標","title":"從札幌出發","status":"ESTIMATED","desc":"早出發；前晚先買早餐。車班與接駁尚待刷新。","map":"札幌駅","group":"morning","official":null},{"time":"白天","title":"前往 Niseko Grand Hotel／Annupuri","status":"PLAN","desc":"大件行李、當地交通與接駁需確認。","map":"ニセコグランドホテル","group":"afternoon","official":null},{"time":"下午・半天","title":"Annupuri 初學者單板滑雪","status":"FIXED","desc":"滑雪場與運動種類已確定；租具尚未預訂。","map":"ニセコアンヌプリ国際スキー場","group":"afternoon","official":null},{"time":"晚上","title":"Niseko Grand Hotel 溫泉","status":"PLAN","desc":"住宿一晚；餐食方案尚未核實。","map":"ニセコグランドホテル","group":"evening","official":null}],"notes":["兩人都需要 snowboard + boots，阿伶另需要安全帽。","租具與滑雪鞋尺寸仍待量測／確認，暫不在網頁標成已預約。","二世谷交通優化依既有決策延至 2026 年 12 月刷新。"]},{"date":"02.12","weekday":"FRI","cn":"週五","area":"滑雪後回札幌","subtitle":"早上滑雪・薄野成吉思汗","theme":"#D6A67B","stay":"Vessel Hotel Campana Susukino｜住宿日期已定，訂房文件待核對","transport":"Annupuri → 還租具 → 二世谷 → 札幌／薄野","events":[{"time":"上午","title":"Annupuri 再滑半天","status":"FIXED","desc":"延續初學者單板雪；天氣與現場安全優先。","map":"ニセコアンヌプリ国際スキー場","group":"morning","official":null},{"time":"滑雪結束後","title":"歸還器材／二世谷返札幌","status":"PLAN","desc":"車次、行李與接駁仍待安排，不填假定班表。","map":"ニセコアンヌプリ国際スキー場","group":"afternoon","official":null},{"time":"晚間","title":"入住 Vessel Hotel Campana Susukino","status":"FIXED","desc":"2/12–2/14 住宿日期已確定，正式訂房證明另需驗證。","map":"ベッセルホテルカンパーナすすきの","group":"evening","official":null},{"time":"晚餐・排隊時間彈性","title":"成吉思汗だるま 本店","status":"FIXED","desc":"已選定本店；現場候位，不是預約。","map":"成吉思汗だるま 本店","group":"evening","official":null},{"time":"有精神再安排","title":"夜間霜淇淋／札幌夜間聖代","status":"CANDIDATE","desc":"只確定想體驗，店名與日期尚未決定。","map":"すすきの","group":"evening","official":null}],"notes":["固定的達摩本店晚餐不可被其他餐廳替代。","夜間甜點是體驗候選，不需要犧牲休息來完成。"]},{"date":"02.13","weekday":"SAT","cn":"週六","area":"札幌深度散策","subtitle":"北海道神宮・購物・直播鏡頭","theme":"#95B0A4","stay":"Vessel Hotel Campana Susukino｜住宿日期已定","transport":"薄野／札幌市區步行及大眾運輸，實際動線依當天購物調整","events":[{"time":"早餐・使用者偏好","title":"Vessel 飯店早餐","status":"PREFERRED","desc":"希望 2/13 與 2/14 都吃；尚未證明含在房價、已加購或預訂。","map":"ベッセルホテルカンパーナすすきの","group":"morning","official":null},{"time":"上午～下午","title":"北海道神宮","status":"PLAN","desc":"札幌行程主軸之一；天候影響步行與參拜時間。","map":"北海道神宮","group":"morning","official":null},{"time":"下午","title":"札幌站／大丸／Stellar Place 購物","status":"PLAN","desc":"逛街方向與採買內容保留彈性。","map":"大丸札幌店","group":"afternoon","official":null},{"time":"逛狸小路時","title":"狸小路 8／9 丁目直播鏡頭交叉口","status":"FIXED","desc":"日期與行程連動已確認，時間不固定；自然經過，不刻意擺拍或妨礙交通。","map":"三角山五衛門ラーメン 札幌 狸小路","group":"afternoon","official":"https://hokkaidodo.jp/tanukikoji8/"},{"time":"順路","title":"狸小路商店街・Seicomart 採買","status":"CANDIDATE","desc":"選順路門市體驗北海道特色零食，不為小物折返。","map":"狸小路商店街","group":"afternoon","official":null},{"time":"有需要才啟用","title":"中央場外市場帝王蟹補吃","status":"BACKUP","desc":"只有 2/9 沒有吃到滿意的鱈場蟹，才考慮替換部分逛街時間。","map":"札幌市中央卸売市場 場外市場","group":"afternoon","official":null},{"time":"夜間・尚未選店","title":"札幌深夜霜淇淋／聖代","status":"CANDIDATE","desc":"希望和阿伶一起體驗；店家、時間尚未選。","map":"すすきの","group":"evening","official":null}],"notes":["直播站位在狸小路 8/9 丁目交叉口，不是狸小路 4 丁目的鏡頭。","直播業者提醒不要對鏡頭揮手、跳舞或擺姿勢。","早餐是偏好，非已訂餐。"]},{"date":"02.14","weekday":"SUN","cn":"週日","area":"北海道，再見","subtitle":"飯店早餐・新千歲機場・返台","theme":"#9BB3D4","stay":"退房｜Vessel Hotel Campana Susukino","transport":"札幌 → 新千歲機場 CTS → 桃園 T2","events":[{"time":"早上","title":"Vessel 飯店早餐","status":"PREFERRED","desc":"希望當天吃飯店早餐；加購／房價包含與供應內容尚未核實。","map":"ベッセルホテルカンパーナすすきの","group":"morning","official":null},{"time":"早上・以緩衝為主","title":"飯店退房並前往 CTS","status":"PLAN","desc":"目標約 11:30–12:00 抵達機場；JR 實際班次未指定。","map":"新千歲空港駅","group":"morning","official":null},{"time":"僅特定條件","title":"場外市場帝王蟹備案","status":"BACKUP","desc":"若 2/9 沒吃到才可能考慮；與飯店早餐、機場緩衝互相衝突，不能視為既定行程。","map":"札幌市中央卸売市場 場外市場","group":"morning","official":null},{"time":"14:40 日本時間","title":"CI131 新千歲起飛","status":"BOOKED","desc":"中華航空，勿自行推定 CTS 航廈號碼。","map":"新千歲機場","group":"afternoon","official":null},{"time":"18:15 台灣時間","title":"抵達桃園 T2","status":"BOOKED","desc":"返台預計時間。","map":"桃園國際機場第二航廈","group":"evening","official":null}],"notes":["離境日以航班緩衝為優先。","2/14 場外市場僅備案，不可悄悄取代 Vessel 早餐。","行李件數／旅伴額度與實際航班資訊，出發前再檢查。"]}],"shopping":[{"name":"10 爪城市步行冰爪","sub":"L 號 × 2 雙；仍需搭配實際雪靴試穿","tag":"已選尺寸・未證實購買"},{"name":"Asahi Dear-Natura GOLD CP2305","sub":"日本採買候選；規格、價格、實體庫存待查","tag":"採買候選"},{"name":"Asahi ココカラケア CP2305","sub":"與 Dear-Natura 比較，不代表兩款都買","tag":"比較候選"},{"name":"新ビオフェルミンS（新表飛鳴）","sub":"比對日本包裝數量與台灣 Costco 單顆成本","tag":"採買候選"},{"name":"森永 BB536","sub":"產品完整版本與通路仍待確認","tag":"採買候選"},{"name":"魚咬熊迷你擺飾","sub":"留意遇到的店舖；品牌與販售點尚未確認","tag":"尋寶候選"},{"name":"Seicomart 北海道特色零食／乳品","sub":"現有行程順路逛，不為低價單品折返","tag":"順路體驗"},{"name":"合利他命 EX PLUS","sub":"台灣 Costco 有 620 錠價格基準；日本現地價格／包裝未查","tag":"價格比較候選"},{"name":"札幌農學校餅乾","sub":"台灣 Costco 24 片基準；日本伴手禮價格須核對相同規格","tag":"順路比價"},{"name":"若元益生菌錠","sub":"台灣 Costco 350 錠比較基準；與若元胃腸錠不同品項","tag":"價格比較候選"},{"name":"若元胃腸錠","sub":"台灣 Costco 1,000 錠比較基準；不可與益生菌款混用","tag":"價格比較候選"},{"name":"北海道在地牛乳／乳製品","sub":"便利商店有看到再挑選，飲品需考量冷藏與攜帶","tag":"地方體驗"},{"name":"Seicomart Hot Chef 熟食","sub":"順路的門市有看到再買；不為單品繞路","tag":"地方體驗"}],"checks":{"隨身準備":["護照與相關入境文件","手機、充電器、行動電源","重要訂房／航班資訊離線備份","保暖外套、手套、圍巾","雪地防滑鞋／雪靴試穿","日常藥品及個人用品"],"交通／住宿核對":["確認 FD242 旅伴行李額度","確認 CI131 託運額度適用旅客","二世谷飯店接駁與 12 月交通刷新","確認 Vessel 飯店訂房文件與早餐是否加購","旭川／小樽 JR 班次與回程時間","JR Inn 2/8–2/11 確認 Email 或 IKYU 平台／飯店訂房狀態（目前只有訂單截圖）","確認 Niseko Grand Hotel 2/11 接駁預約與飯店集合位置"],"滑雪與雪地":["兩人的單板鞋尺寸／腳長確認","兩人 snowboard + boots 租借方案","阿伶安全帽租借","防滑冰爪 L 號兩雙與雪靴實際適配","雪場／滑雪接駁／住宿行李動線確認"],"出發前動態確認":["2027 雪祭與雪燈活動正式時程","景點、餐廳實際營業日與最後入場","機場出入境及班機最新時間","冬季路況、JR 延誤及接駁","2/13 直播鏡頭是否正常運作","確認北海道 eSIM／漫遊覆蓋與離線重要文件"]},"lastUpdated":"2026-11-11","dataSource":"Library /旅行/Hokkaido_2027/ PROJECT_STATE / TRANSPORT / PLACES / SKI RENTAL / OPEN ITEMS 主檔"};
+const EXTRA={"0-0":{"points":["已核對航空公司訂位畫面：FD242，2027/2/8 07:15 自桃園 T1 起飛（台灣時間），12:00 抵達新千歲（日本時間）。","使用者本人所示航班附加服務含手提 7 kg、託運 20 kg；這不能證明旅伴也有相同額度。","航班是否準點、報到與登機口以出發前航空公司公告為準。"],"links":[]},"0-1":{"points":["CTS 12:00 為日本時間。先完成入境審查、提領行李、海關，再找 JR 新千歲空港站。","約 13:00 才開始後續 JR 移動，是通關緩衝推估，絕不是已訂好的列車。"],"links":[]},"0-2":{"points":["新千歲機場站搭 JR 快速／特別快速 Airport 至札幌站，參考車程約 33–43 分鐘，依實際車種而異。","抵達後才依當時狀況決定班次，避免航班延誤造成預訂車次落空。","札幌—富良野區域鐵路周遊券為尚未購買的建議方案；若採用，記得先在 JR 服務窗口兌換／領取。"],"links":[["JR 北海道","https://www.jrhokkaido.co.jp/global/chinese/index.html"]]},"0-3":{"points":["固定 2/8 晚午餐：JR Tower Stellar Place Center 6F，札幌站共構商場。","一般營業參考 11:00–22:00、最後點餐 21:30；熱門時段可能提前停止發放候位票。2027/2 的營業資訊仍待核對。","不接受預約，14:30–16:00 只是工作時間窗；若飛機、行李或排隊拖延，應動態調整同日晚餐節奏。"],"links":[["根室花まる分店官方","https://www.sushi-hanamaru.com/store/details/s03.html?p=a"],["JR Tower 商場","https://www.jr-tower.jp/shop_detail_stellar/125"]]},"0-4":{"points":["JR Inn Sapporo North2：2/8 入住、2/11 退房的 IKYU 訂單截圖已提供，但確認 Email／平台訂房狀態尚未核對；不能標為正式已確認訂房。預計雙人禁菸半雙人床房、僅淋浴、不含早餐。","入住 15:00–24:00、退房 10:00 前；到飯店寄放行李／正式入住的順序取決於晚午餐與排隊時間。","訂房總額扣點後 ¥69,960；線上信用卡付款方式不代表已成功扣款。訂房代碼與驗證碼刻意不放在公開網頁。"],"links":[]},"0-5":{"points":["雪祭大通會場主要沿大通公園西 1–11 丁目。","旅遊資料目前列 2027 雪祭 2/4–2/11、大通點燈參考至 22:00；仍需出發前核對當年度細節。","屬於 Day 1 固定體驗，但開始／結束時刻應配合晚午餐與晚餐排隊，不強制安排單一到達時間。"],"links":[]},"0-6":{"points":["固定分店：スープカレー GARAKU sitatte sapporo 店，札幌市中央區北 2 條西 3 丁目 1-20，札幌フコク生命越山ビル B1F。","一般晚餐時段參考 17:00–21:00，最後點餐 20:30；可能因湯售完或人潮提早停止受理，2027 需再核對。","2/8 已選定這間，非已訂位；不能默默改成另一間 GARAKU 或移至 2/10。"],"links":[["GARAKU 官方店鋪","https://s-garaku.com/shoplist.php"]]},"0-7":{"points":["薄野會場／燈飾走訪是彈性安排，不犧牲抵達日的休息。","可由大通沿札幌市中心步行／地鐵一站前往，雪地路面與疲勞度以現場為準。"],"links":[]},"1-0":{"points":["札幌 → 小樽 JR 是主交通方向，官方一般參考最快約 32 分鐘。","當天來回車次先保持彈性，等 2027 雪燈之路亮燈與晚餐確定後再銜接；不要把特定列車當已預約。","三角市場就在小樽站旁，舊版「先去南小樽」的動線已不適用。"],"links":[]},"1-1":{"points":["高品質鱈場蟹（タラバガニ）是固定用餐目標；三角市場為暫定主要地點，但店家尚未選。","目前研究候選：綱岸水產、武田鮮魚店、惠比壽櫻；現場比較不是三家都要去吃。","購買前確認蟹種、實際重量／單價／總價、料理費、烹調方式、有無座位、候位時間；避免被推銷壓力帶著走。","若當日吃不到滿意的蟹，2/13 札幌中央場外市場的「おもいで食堂」才是備案，不是二條市場。"],"links":[]},"1-2":{"points":["正福屋（小樽市稻穗 2 丁目 9-12）是使用者想試的ぱんじゅう小點心，屬順路候選，不必硬塞進大份帝王蟹午餐後。","官方一般參考 11:00–18:00，週一休，麵糊售完可能提前結束；2027/2/9 週二營業仍應再核實。","桑田屋小樽本店一般週二休，不列為這天的主要替代。"],"links":[["正福屋官方","https://xn--t8jzbuh.com/"]]},"1-3":{"points":["由小樽站／三角市場往堺町通り散步採買，依店家與天氣彈性停留。","冬季雪地／結冰會拉長步行時間；原則是順路逛，不為低價伴手禮折返。"],"links":[]},"1-4":{"points":["かま栄工場直売店：小樽市堺町 3-7，位在堺町通散策動線。","推薦看工廠與品嚐パンロール、工場限定パンドーム／ウィンナーロール；不是固定購買。","一般冬季營業參考 09:00–18:00，2027 需再核對。"],"links":[["かま栄官方分店","https://kamaei.co.jp/store_introduce/chokubai/"]]},"1-5":{"points":["小樽運河與雪燈之路是這天固定核心體驗，2027 活動資料列 2/6–2/13。","實際點燈時間、場地動線、交通管制與雪況屬近日期再確認項目；安排日落後觀賞較有氣氛。","與晚餐順序保留彈性，返札幌前仍需查實際 JR 時刻。"],"links":[["小樽觀光協會","https://otaru.gr.jp/"]]},"1-6":{"points":["晚餐三選一，全部還是候選，等待與阿伶討論後再決定：","① 桂苑｜小樽市稻穗 2-16-14，あんかけ焼そば；營業結束時間資料有 19:00 與 20:00 衝突，暫以較保守 19:00 看待。","② 若鶏時代なると本店｜小樽市稻穗 3-16-13，招牌若鶏半身揚げ；一般營業 11:00–21:00／最後點餐 20:30。","③ ニュー三幸小樽本店｜小樽市稻穗 1-3-6，あんかけ焼そば；一般 11:30–21:00／最後點餐 20:30。","選擇需考量午餐蟹量、雪燈時段、排隊與回程車次，不把三間全部排進同一天。"],"links":[["桂苑資訊","https://otaru.gr.jp/project/otarutsu202509-chinese2"],["なると本店官方","https://food-collect.jp/naruto/shops/honten/"],["ニュー三幸觀光資訊","https://otaru.gr.jp/shop/newsanko"]]},"1-7":{"points":["從小樽站返回札幌；實際搭乘車次等晚餐店家與雪燈活動時間確定後再選。","預留冰雪步行／候位緩衝，不要把歷史參考末班車當 2027 已公告。"],"links":[]},"2-0":{"points":["初步推薦的特急 Lilac 5：札幌 08:00 → 旭川 09:25；這仍是候選時刻，尚未完成 2027/2/10 當日劃位。","JR 北海道特急為全車指定席；若購買涵蓋此段的札幌—富良野區域周遊券，可依適用規則劃位。","抵達旭川後銜接旭山動物園巴士 41／47 號，旭川站 Bus Touch 6 號乘車處。"],"links":[]},"2-1":{"points":["旭川電氣軌道 41／47 號往旭山動物園，參考車程約 40 分鐘、成人 ¥670；09:55 → 約 10:34 是舊／現有時刻模式候選，不是已公告的 2027/2/10 班次。","冬季動物園開園參考 10:30–15:30；企鵝散步受積雪／天候影響，當日場次需再核對。","動物園巴士並非 JR 路線，不能以 JR Pass 乘坐；旭川電氣軌道此線不可假設可刷手機 Suica。"],"links":[["旭山動物園官方","https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/"]]},"2-2":{"points":["梅光軒旭川本店位於旭川站市中心步行範圍，維持 Day 3 用餐，不因 2/8 GARAKU 決策而替換。","研究列常見分段營業約 11:00–15:00、17:00–20:30；適合動物園後晚餐，但 2027 日期需核對。"],"links":[]},"2-3":{"points":["旭川冬祭 2027 參考 2/6–2/11，平和通買物公園與車站／梅光軒相近，優先作為不繞路加碼。","比起需要再轉車的旭橋河畔主會場，市中心冰雕較順路。","男山酒造 SAKE PARK 是另外的可選研究點，不屬於核心動線；美瑛／富良野／精靈露臺不在本日正式方向。"],"links":[]},"2-4":{"points":["初步目標約 19:00 旭川 → 札幌特急，約 18:00 可作較早備案；車次與開行日未正式核對。","如果動物園／晚餐拖延，應先確保有可搭乘的指定席，不為冰雕延誤回札幌。"],"links":[]},"3-0":{"points":["目前偏好的「早班 JR」路線為札幌 → 小樽 → 倶知安 → 二世谷，**需轉乘兩次**。","2026 年時刻模式候選：札幌 07:05 → 小樽 07:51；小樽 08:06 → 倶知安 09:23；倶知安 09:50 → 二世谷 10:06。","上述均非 2027/2/11 官方核定當日班次。前晚先買好方便攜帶的早餐，冬季轉乘時間要留意延誤。"],"links":[]},"3-1":{"points":["二世谷大飯店已親自回覆：若最終搭到約 10:06 抵達 JR 二世谷站的火車，可安排車站接駁；「可安排」不等於已完成接駁預約。","接駁是 JR 二世谷站，不是倶知安站；約 10 分鐘車程至飯店。","需至少提早 2 天透過 Booking.com 訊息再次預約，建議最晚 2027/2/9 日本時間；若 2/10 才聯絡，優先用飯店 email 並確認會合位置。","飯店提早寄放行李／接駁至 Annupuri 的細節仍須取得明確答覆。"],"links":[["飯店接駁詢問信箱","mailto:niseko_news@niseko-grand.com"]]},"3-2":{"points":["雪場與 snowboard（單板滑雪）已定，2/11 下午與 2/12 上午各規劃半天；兩位都是初學者。","兩人需要單板＋雪鞋；阿伶另外需要安全帽，雪鏡預計先在台灣買。","Annupuri 當季 2/11 營業參考 08:30–19:30，五小時纜車票 ¥6,700／成人、全天 ¥7,800（研究時參考價，非最終購票）。","租具店尚未決定，需優先考慮飯店到貨與現場試鞋／更換的效率。"],"links":[]},"3-3":{"points":["Niseko Grand Hotel 已確認 2027/2/11–2/12 一晚、兩位旅客住宿。","溫泉屬住宿晚間體驗；2/11 晚餐與 2/12 早餐的飯店餐食方案仍未確認。","附近昆布溫泉地帶步行可達便利商店不可靠，需事先處理飲食安排。"],"links":[]},"4-0":{"points":["2/12 上午延續 Annupuri 單板滑雪，仍以初學者適合雪道、天候與安全為主。","歸還租具時刻必須與回札幌交通一起倒推；租具尚未付訂。"],"links":[]},"4-1":{"points":["Day 5 回札幌交通仍是重大 OPEN ITEM，尚未決定搭 JR 還是直達巴士。","候選 JR（現有時刻參考，非 2027/2/12 定班）：二世谷 16:00 → 倶知安 16:16／16:21 → 小樽 17:36／18:00 → 札幌 18:35；參考票價 ¥2,530／人。舊版約 14:46 的 JR 資訊已廢止，不要用。","候選 Resort Liner：Annupuri 區約 15:55 發車、札幌飯店區約 19:05–19:45 抵達，¥6,000／人，需預約；需核對租具歸還／行李取回後能否趕上。","先比對完整的飯店—雪場—取行李—站／巴士—札幌路線，不能只看交通工具車程。"],"links":[]},"4-2":{"points":["Vessel Hotel Campana Susukino 使用者已將 2/12–2/14 住宿日期列為 FIXED，但正式訂房憑證還需另外核對；不能稱為已確認付款。","飯店靠近薄野站，官方參考由薄野站 4 號出口步行約 4 分鐘。","2/13、2/14 希望都享用飯店早餐，參考房客 ¥2,300／人／天，06:00–10:00（最後入場約 09:30）；是否含餐／加購未證實。"],"links":[]},"4-3":{"points":["成吉思汗だるま 本店（薄野）已確定為 2/12 晚餐；不是「有看到就吃」的候選。","一般營業參考 17:00–翌日 05:00，不接受預約；19:00–20:00 常排隊、約 21:00 可能較緩，僅為店家參考。","到達時間須等二世谷回札幌交通與飯店入住動線定案，不能先固定用餐時刻。"],"links":[]},"4-4":{"points":["想與阿伶體驗札幌夜間霜淇淋或「締めパフェ（收尾聖代）」，偏好薄野附近。","店家、晚上哪一天、是否要吃都還沒決定，不能排擠達摩本店晚餐或隔天休息。"],"links":[]},"5-0":{"points":["使用者希望 2/13、2/14 都吃 Vessel 的飯店早餐，但目前未核實房價包含或購買。","現行房客參考價 ¥2,300／人／天；供應品項、蟹料理與 2027 年實際價錢都屬 DYNAMIC。","飯店早餐出現的雪蟹（ズワイガニ）不等於原本想吃的鱈場蟹（タラバガニ）。"],"links":[]},"5-1":{"points":["北海道神宮：由薄野搭南北線至大通、轉東西線往圓山公園，出站後步行約 12–15 分鐘（冰雪路面另留緩衝）。","二月神宮一般開放參考 07:00–16:00；預估 08:30–10:30 造訪仍可行，但不表示已鎖定具體時間。","天候不佳時先顧步行安全。"],"links":[]},"5-2":{"points":["北海道神宮回札幌站可由圓山公園搭東西線至大通，轉南北線至札幌站。","大丸札幌與 JR 札幌站相連，Stellar Place 同區；逛完再往狸小路／薄野方向走，減少折返。","購物依現場價格與門市庫存判斷，不把僅網路在售視為札幌實體店有貨。"],"links":[]},"5-3":{"points":["2/13 逛狸小路時去「狸小路 8 丁目與 9 丁目交叉口」自然經過，時刻不固定。","辨識地標是三角山五衛門ラーメン一帶；不是狸小路 4 丁目的另一個攝影機。","直播可能延遲、斷線或視線被擋；業者要求不要對鏡頭揮手、跳舞或刻意擺拍，請站在人行道、遵守號誌。","若要友人遠端截圖，可直接分享直播頁；不保證事後能找到存檔。"],"links":[["直播頁／業者","https://hokkaidodo.jp/tanukikoji8/"]]},"5-4":{"points":["狸小路商店街與 Seicomart 是既有札幌購物動線的順路候選。","重點是試北海道特色乳品、熟食或自有品牌零食；Seicomart 並非僅在北海道展店，也不是所有商品都限定北海道。","門市庫存與促銷價不明，別為單一零食特地繞路。"],"links":[]},"5-5":{"points":["只有 2/9 未能吃到滿意的鱈場蟹，才考慮札幌中央卸賣市場「場外市場」的 おもいで食堂／北海道特産品販売。","這是使用者以前吃過、印象不錯的店，不是二條市場。","若改到 2/13，會占用神宮與購物時間，因此保留備案，不主動取代既有路線。"],"links":[]},"5-6":{"points":["深夜霜淇淋／收尾聖代是共享體驗想法；目前沒有選定店鋪或時間。","可在回 Vessel 飯店路上順路找，但不因候選行程犧牲睡眠。"],"links":[]},"6-0":{"points":["Vessel 早餐是 2/14 的使用者偏好，不是已購買或房價已含餐。","若當天還想去場外市場吃鱈場蟹，會與早餐、退房和機場緩衝衝突；不得兩者都當作已定行程。"],"links":[]},"6-1":{"points":["預設路線：Vessel 飯店 → 薄野站 → 札幌站 → JR Airport 快速／特別快速 → 新千歲機場。","工作目標 CTS 約 11:30–12:00 到達，為 14:40 國際線保留報到與冬季鐵路延誤緩衝。","札幌出發時刻仍待與 2027/2/14 JR 班表及航班報到要求校準。"],"links":[]},"6-2":{"points":["僅當 2/9 沒吃到好蟹且早晨交通仍有足夠緩衝才考慮。","おもいで食堂／北海道特産品販売（札幌中央場外市場）現行參考營業 08:30–16:00；2027/2/14 是否營業及是否有鱈場蟹待查。","此備案不能默默取代 Vessel 早餐或壓縮新千歲機場 11:30–12:00 到達目標。"],"links":[]},"6-3":{"points":["CI131 已有航空訂位畫面：2027/2/14 14:40 由新千歲起飛，18:15 台灣時間抵達桃園 T2。","搭機航廈在新千歲的數字代碼沒有於訂位畫面確認，不應標成「CTS T1」。","返程訂位頁顯示「託運行李 2 件」，使用者另外確認每件 23 kg；但「此額度屬每人或整筆訂位」還需確認。"],"links":[]},"6-4":{"points":["目的地桃園國際機場第二航廈，畫面預計 18:15（台灣時間）抵達。","時差別弄反：日本比台灣快 1 小時；機場現場與航司公告才是最新資訊。"],"links":[]}};
+const SHOP_EXTRA={"0":["需求已選 10 爪防滑冰爪 L 號 2 雙，但尚未證明買到。","兩人的雪靴都尚未確認實際鞋底外型；特別是阿伶原本較小的鞋碼，L 號是否過鬆必須穿著實際雪靴測試。","冰爪金屬配件應安排於託運行李，勿放隨身包。"],"1":["Asahi Dear-Natura GOLD CP2305 是欲比較／試驗的日本商品，不是已購買或有效性已確立的治療。","先核對產品版本、包裝、有效成分、每日份量、實體店庫存與單位價格。"],"2":["ココカラケア 也是 CP2305 比較候選。","先前截圖所顯示的每日期望成本不是獨立確認的現地售價；沒有決定兩種都買。"],"3":["請核對「新ビオフェルミンS」的完整品名與每包顆數，避免混同不同 S／PLUS 版本。","台灣 Costco 曾拍到 820 錠 NT$1,099，約 NT$1.34／錠，僅為台灣參考基準；沒有即時日幣價格。"],"4":["森永 BB536 是菌株相關品項，但尚未指定確切上市商品與錠數。","確認標示菌株／配方／容量、可購門市後再比較價格；不要僅憑菌株名稱判定成分一致。"],"5":["原始 Threads 照片是一個深灰色、像被魚咬住頭部的小熊擺飾。","品牌、材質、北海道實際販售店、價格與庫存均未知；沿路看到再比較，不另開特別購物行程。"],"6":["Seicomart 不是全日本僅北海道有店，但北海道起家的自有品牌、乳品與 Hot Chef 熟食很值得順路看看。","例如牛奶／霜淇淋等乳製品，須視是否可即時食用及飯店冷藏空間。"]};
+const icons={
+ calendar:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 2v6m10-6v6M3 11h18"/><path d="M8 15h2m4 0h2"/>',
+ plane:'<path d="M21 3 3 12l7 2 2 7 9-18zM10 14l11-11"/>',
+ bag:'<path d="M4 8h16l-1 13H5L4 8zM8 9V6a4 4 0 0 1 8 0v3"/>',
+ check:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="m7 12 4 4 7-8"/>',
+ home:'<path d="M3 11 12 3l9 8v10H3V11zM9 21v-7h6v7"/>',
+ snow:'<path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/>',
+ train:'<rect x="5" y="3" width="14" height="15" rx="4"/><path d="M8 7h8M8 11h8M8 18l-3 4m11-4 3 4M9 15h1m4 0h1"/>',
+ bed:'<path d="M3 5v16M3 18h18v3M4 12h16v6H4M7 8h5v4H7z"/>',
+ heart:'<path d="M20 7a5 5 0 0 0-8-2 5 5 0 0 0-8 2c-2 5 5 10 8 13 3-3 10-8 8-13z"/>',
+ pin:'<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/>',
+ link:'<path d="M14 3h7v7M21 3l-10 10M18 13v7H4V6h7"/>',
+ arrow:'<path d="M3 12h18m-7-7 7 7-7 7"/>'
+};
+function icon(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="#3E3A39" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(icons[name]||icons.snow)+'</svg>'}
+document.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));
+const days=DATA.days, labels={BOOKED:'已訂',FIXED:'必去・已定',PLAN:'規劃中',ESTIMATED:'估計時間',FLEX:'彈性安排',OPTION:'順路可選',CANDIDATE:'候選',PREFERRED:'想體驗',BACKUP:'備案',VERIFY:'確認待核'}, statusStyle={BOOKED:'booked',FIXED:'fixed',PLAN:'plan',ESTIMATED:'plan',FLEX:'option',OPTION:'option',CANDIDATE:'option',PREFERRED:'option',BACKUP:'option',VERIFY:'plan'};
+let selected=0,filter='all';const memory={};
+function esc(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function mapurl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
+function get(k){try{return localStorage.getItem('hkd_story_v02_'+k)==='1'}catch(e){return !!memory[k]}}
+function set(k,v){try{localStorage.setItem('hkd_story_v02_'+k,v?'1':'0')}catch(e){memory[k]=v}}
+function classify(e){if(e.status==='FIXED'||e.status==='BOOKED')return 'fixed';if(['CANDIDATE','OPTION','FLEX','PREFERRED','BACKUP'].includes(e.status))return 'option';return 'plan'}
+function transport(e){const t=e.title;if(/FD242|CI131|起飛|抵達桃園|抵達新千歲/.test(t))return '飛機';if(/JR|特急/.test(t))return 'JR 鐵路';if(/巴士|接駁|二世谷返札幌/.test(t))return '交通銜接';if(/滑雪|Annupuri/.test(t))return '滑雪';return ''}
+
+function extraDetail(e,day,i){
+ const x=EXTRA[day+'-'+i];
+ if(!x)return '';
+ const list=x.points.map(t=>'<li>'+esc(t)+'</li>').join('');
+ const links=x.links.map(p=>'<a class="link-chip secondary" href="'+esc(p[1])+'" target="_blank" rel="noopener noreferrer">'+icon('link')+' '+esc(p[0])+'</a>').join('');
+ return `<details class="more-detail"><summary>現地詳細攻略 <span class="toggle-word">展開</span></summary><div class="more-body"><ul>${list}</ul>${links?`<div class="entry-actions">${links}</div>`:''}<div class="evidence-note">資料來自既有北海道專案；營業日、班次、金額、候位與庫存請在旅遊日期前重新確認。</div></div></details>`
+}
+function shopDetail(i){const a=SHOP_EXTRA[i];if(!a)return '';return `<details class="shop-extra"><summary>選品／價格注意事項</summary><ul>${a.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></details>`}
+
+function renderTabs(){document.getElementById('date-row').innerHTML=days.map((d,i)=>`<button role="tab" aria-controls="day-panel" aria-selected="${i===selected}" class="date-btn ${i===selected?'active':''}" data-day="${i}"><small>DAY ${i+1} · ${esc(d.cn)}</small><b>${esc(d.date)}</b><span class="date-city">${esc(d.area)}</span></button>`).join('')}
+function renderDay(){const d=days[selected];const arr=d.events.filter(e=>filter==='all'||classify(e)===filter);const entries=arr.map(e=>`<article class="entry ${e.status==='FIXED'?'top-priority':''}"><div class="entry-card"><div class="entry-tags"><span class="entry-time">${esc(e.time)}</span><span class="entry-status ${statusStyle[e.status]||'plan'}">${esc(labels[e.status]||e.status)}</span>${transport(e)?`<span class="entry-transport">${transport(e)}</span>`:''}</div><h4>${esc(e.title)}</h4><p>${esc(e.desc)}</p>${e.map||e.official?`<div class="entry-actions">${e.map?`<a class="link-chip" target="_blank" rel="noopener noreferrer" href="${mapurl(e.map)}">${icon('pin')} Google Maps</a>`:''}${e.official?`<a class="link-chip secondary" target="_blank" rel="noopener noreferrer" href="${esc(e.official)}">${icon('link')} 官方／參考</a>`:''}</div>`:''}${extraDetail(e,selected,d.events.indexOf(e))}</div></article>`).join('');
+ document.getElementById('day-panel').innerHTML=`<div class="day-titleline"><div><div class="day-kicker">DAY ${selected+1} · ${esc(d.cn)} · 日本時間</div><h3>${esc(d.area)}</h3><p>${esc(d.subtitle)}</p></div><div class="day-mark"><small>FEB</small><b>${esc(d.date.slice(3))}</b><small>2027</small></div></div><div class="day-facts"><div class="day-fact"><b>今晚住宿</b>${esc(d.stay)}</div><div class="day-fact"><b>交通方向</b>${esc(d.transport)}</div></div><div class="filter-row"><button class="filter ${filter==='all'?'active':''}" data-filter="all">全部 ${d.events.length}</button><button class="filter ${filter==='fixed'?'active':''}" data-filter="fixed">已訂／已定 ${d.events.filter(e=>classify(e)==='fixed').length}</button><button class="filter ${filter==='option'?'active':''}" data-filter="option">候選／彈性 ${d.events.filter(e=>classify(e)==='option').length}</button></div><div class="timeline">${entries||'<p class="empty-state">這個分類目前沒有行程，請切回全部。</p>'}</div><aside class="day-notes"><b>今日備註・小提醒</b><ul>${d.notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></aside><div class="day-bottom"><button data-turn="-1" ${selected===0?'disabled':''}>前一天</button><span>DAY ${selected+1} / 7</span><button data-turn="1" ${selected===6?'disabled':''}>下一天</button></div>`;
+ document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;renderDay()}));document.querySelectorAll('[data-turn]').forEach(b=>b.addEventListener('click',()=>{choose(selected+Number(b.dataset.turn));document.getElementById('days').scrollIntoView({block:'start',behavior:'smooth'})}));
+}
+function choose(n){selected=Math.max(0,Math.min(6,n));filter='all';renderTabs();renderDay();const b=document.querySelector('.date-btn.active');if(b)b.scrollIntoView({block:'nearest',inline:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
+document.getElementById('date-row').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(b)choose(Number(b.dataset.day))});
+document.getElementById('date-row').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key))return; e.preventDefault();choose(selected+(e.key==='ArrowRight'?1:-1));document.querySelector('.date-btn.active')?.focus()});
+function box(k){return `<input type="checkbox" data-check="${esc(k)}" ${get(k)?'checked':''} aria-label="完成此項"/>`}
+function shops(){document.getElementById('shop-layout').innerHTML=DATA.shopping.map((o,i)=>`<article class="shop-card" id="shop-card-${i}"><label class="check-line">${box('shop'+i)}<span class="check-text"><strong>${esc(o.name)}</strong></span></label><p class="shop-detail">${esc(o.sub)}</p><span class="shop-tag">${esc(o.tag)}</span>${shopPrice(i)}${shopDetail(i)}</article>`).join('');updatePrices();document.getElementById('shop-count').textContent=`${DATA.shopping.filter((x,i)=>get('shop'+i)).length} / ${DATA.shopping.length} 已勾選`}
+function tasks(){const entries=Object.entries(DATA.checks);document.getElementById('task-layout').innerHTML=entries.map(([name,items],i)=>`<article class="check-card"><h3>${esc(name)}</h3>${items.map((x,j)=>`<label class="check-line">${box('task'+i+'-'+j)}<span class="check-text">${esc(x)}</span></label>`).join('')}</article>`).join('');const total=entries.reduce((n,a)=>n+a[1].length,0),done=entries.reduce((n,a,i)=>n+a[1].filter((x,j)=>get('task'+i+'-'+j)).length,0);document.getElementById('task-count').textContent=`${done} / ${total} 已勾選`}
+document.addEventListener('change',e=>{if(e.target.matches('[data-check]')){set(e.target.dataset.check,e.target.checked);shops();tasks()}});
+function countdown(){const start=new Date('2027-02-08T07:15:00+08:00').getTime(),end=new Date('2027-02-14T18:15:00+08:00').getTime(),now=Date.now();let days=0,hours=0,minutes=0,message='';if(now<start){const m=Math.max(0,Math.floor((start-now)/60000));days=Math.floor(m/1440);hours=Math.floor(m%1440/60);minutes=m%60;message='距離 2027/02/08 FD242 起飛的動態倒數（以裝置時鐘計算）';}else if(now<=end){message='北海道旅行進行中 · 祝旅途平安';}else{message='北海道旅行已結束 · 旅行回憶';}document.getElementById('countdown-days').textContent=days;document.getElementById('countdown-hours').textContent=hours;document.getElementById('countdown-minutes').textContent=minutes;document.getElementById('countdown').textContent=message;}
+
+
+const PRICE_DATA=[{"name":"新ビオフェルミンS／新表飛鳴","tw":1099,"qty":820,"unit":"錠","note":"台灣 Costco：350×2＋120＝820 錠；日本須核對普通 S 與其他版本，不混算。","src":"台灣 Costco 照片 2026/11/1"},{"name":"合利他命 EX PLUS","tw":3699,"qty":620,"unit":"錠","note":"台灣 Costco：280×2＋60＝620 錠。","src":"台灣 Costco 照片 2026/11/1"},{"name":"札幌農學校餅乾","tw":399,"qty":24,"unit":"片","note":"台灣 Costco：24 片。日本需比對相同餅乾版本、入數。","src":"台灣 Costco 照片 2026/11/1"},{"name":"若元益生菌錠","tw":999,"qty":350,"unit":"錠","note":"台灣 Costco：350 錠；與若元胃腸錠不同，請勿混算。","src":"台灣 Costco 照片 2026/11/1"},{"name":"若元胃腸錠／WAKAMOTO STRONG","tw":819,"qty":1000,"unit":"錠","note":"台灣 Costco：1,000 錠；不是益生菌錠。","src":"台灣 Costco 照片 2026/11/1"}];
+const SHOP_PRICE_LOOKUP={3:0,7:1,8:2,9:3,10:4};
+const pMemory={};
+function readPrice(k,def){try{const v=localStorage.getItem('hkd_price_v05_'+k);return v===null?def:v}catch(e){return pMemory[k]??def}}
+function writePrice(k,v){try{localStorage.setItem('hkd_price_v05_'+k,String(v))}catch(e){pMemory[k]=String(v)}}
+function money(n,d=0){return Number(n).toLocaleString('zh-TW',{minimumFractionDigits:d,maximumFractionDigits:d})}
+function shopPrice(i){const k=SHOP_PRICE_LOOKUP[i];if(k===undefined)return '';
+const p=PRICE_DATA[k];const jp=readPrice('jp'+k,'');const q=readPrice('qty'+k,'');
+return `<div class="inshop-compare" data-price-card="${k}"><div class="inshop-head">台日售價比較 <span>台灣 Costco 2026/11/1 基準</span></div><div class="compare-values"><div><small>台灣售價</small><strong>NT$${money(p.tw)}</strong><em>${money(p.qty)} ${esc(p.unit)}</em></div><div><small>日本換算台幣</small><strong class="japan-nt">待輸入</strong><em>含指定海外手續費</em></div><div class="discount-cell"><small>對照台灣售價</small><strong class="discount-value">— 折</strong><em class="discount-note">等待日本價格</em></div></div><div class="jp-price-grid"><label>日本含稅售價（¥）<input data-jp="${k}" type="number" min="0.01" step="1" placeholder="填入日本店內價格" inputmode="decimal" value="${esc(jp)}"></label><label>日本包裝數量（${esc(p.unit)}）<input data-qty="${k}" type="number" min="1" step="1" placeholder="台灣為 ${p.qty}" inputmode="numeric" value="${esc(q)}"></label></div><p class="unit-note">${esc(p.note)} 先確認同配方／版本及包裝量；上方折數以等量單位價比較。</p><p class="snapshot">${esc(p.src)}；日本價格、庫存尚未確認。</p></div>`;
+}
+function updatePrices(){let rate=Number(document.getElementById('fx-rate').value),fee=Number(document.getElementById('fx-fee').value);
+const valid=Number.isFinite(rate)&&rate>0&&rate<=1&&Number.isFinite(fee)&&fee>=0&&fee<=20;
+PRICE_DATA.forEach((p,k)=>{const el=document.querySelector('[data-price-card="'+k+'"]');if(!el)return;
+const converted=el.querySelector('.japan-nt'),discount=el.querySelector('.discount-value'),note=el.querySelector('.discount-note');
+const jpS=el.querySelector('[data-jp]').value.trim(),qS=el.querySelector('[data-qty]').value.trim();
+if(!valid){converted.textContent='匯率輸入錯誤';discount.textContent='— 折';note.textContent='請檢查匯率及手續費';el.removeAttribute('data-result-state');return}
+if(!jpS||!qS){converted.textContent=jpS?'需要包裝數量':'待輸入';discount.textContent='— 折';note.textContent='請輸入日本含稅價格及數量';el.removeAttribute('data-result-state');return}
+const jp=Number(jpS),qty=Number(qS);
+if(!Number.isFinite(jp)||jp<=0||!Number.isFinite(qty)||qty<=0){converted.textContent='數字無效';discount.textContent='— 折';note.textContent='價格與數量必須大於 0';el.removeAttribute('data-result-state');return}
+const nt=jp*rate*(1+fee/100),twSame=p.tw*qty/p.qty,ratio=nt/twSame,amount=twSame-nt;
+converted.textContent='NT$'+money(nt,2);discount.textContent=money(ratio*10,2)+' 折';
+if(amount>=0){note.textContent='等量對比省 NT$'+money(amount,2)+'（'+money((1-ratio)*100,1)+'%）';el.dataset.resultState='save'}
+else {note.textContent='等量對比貴 NT$'+money(-amount,2)+'（'+money((ratio-1)*100,1)+'%）';el.dataset.resultState='expensive'}
+})}
+function initPrices(){const rate=readPrice('rate','0.21333'),fee=readPrice('fee','0');document.getElementById('fx-rate').value=rate;document.getElementById('fx-fee').value=fee;
+document.addEventListener('input',e=>{if(e.target.id==='fx-rate'){writePrice('rate',e.target.value);updatePrices()};if(e.target.id==='fx-fee'){writePrice('fee',e.target.value);updatePrices()};if(e.target.matches('[data-jp]')){writePrice('jp'+e.target.dataset.jp,e.target.value);updatePrices()};if(e.target.matches('[data-qty]')){writePrice('qty'+e.target.dataset.qty,e.target.value);updatePrices()}});
+updatePrices()}
+
+
+const overviewGrid=document.getElementById('trip-overview-grid');
+const daySheets=[...document.querySelectorAll('.trip-overview-expand')];
+// Progressive enhancement: keep all day itineraries expanded when scripts are blocked.
+if(daySheets.length===7){daySheets.forEach(x=>x.open=false);}
+// Native HTML <details> handles opening even if iOS preview blocks scripts.
+
+
+renderTabs();renderDay();shops();tasks();countdown();initPrices();setInterval(countdown,60000);
+</script>
+</body></html>
